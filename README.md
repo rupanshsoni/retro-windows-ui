@@ -4,7 +4,7 @@
 
 A portable Agent Skill for designing, building, retrofitting, and reviewing retro Windows interfaces. It combines era-specific design guidance with complete original offline asset families, semantic tokens, a default Windows desktop mockup, startup-screen examples, an interactive gallery, and opt-in UI sound effects.
 
-Every interface image in this README is the bundled offline mockup or starter. No separate portfolio build is included or required.
+Every interface image in this README is the bundled offline mockup or starter. No separate portfolio build is included or required. README stills carry a presentation-only scanline overlay; the bundled interfaces remain clean unless a CRT effect is explicitly requested.
 
 ## Themes
 
