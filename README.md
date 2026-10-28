@@ -1,10 +1,10 @@
 # retro-windows-ui
 
-![The default Windows desktop mockup with My Computer, Notepad, Start menu, and taskbar](docs/media/desktop-mockup-crt.webp)
+![Windows XP desktop with the authentic Luna theme and Bliss wallpaper, showing the Settings window with soft scanlines](docs/media/showcase/xp.webp)
 
 A portable Agent Skill for designing, building, retrofitting, and reviewing retro Windows interfaces. It combines era-specific design guidance with complete original offline asset families, semantic tokens, a default Windows desktop mockup, startup-screen examples, an interactive gallery, and opt-in UI sound effects.
 
-Every interface image in this README is the bundled offline mockup or starter. No separate portfolio build is included or required. README stills carry a presentation-only scanline overlay; the bundled interfaces remain clean unless a CRT effect is explicitly requested.
+The installable skill is original and offline. The showcase stills in this README come from a separate reference build that uses the portfolio's user-supplied Microsoft artwork; that media is documentation only and is not included in the package.
 
 ## Themes
 
@@ -27,17 +27,19 @@ The runtime also ships no portfolio template. Its full-shell example is the neut
 
 For an exact fan recreation, [references/asset-sourcing.md](skills/retro-windows-ui/references/asset-sourcing.md) documents how to import authentic assets from a user-supplied local reference, keep them out of the public package, and record the source and rights. The installable skill remains original and shippable.
 
-## The default desktop mockup
+## Authentic fidelity showcase
 
-The bundled [desktop mockup](skills/retro-windows-ui/assets/desktop/index.html) is the complete shell example. It is not a portfolio template: it includes desktop icons, My Computer, My Documents, Read Me in Notepad, Recycle Bin, Start, quick launch, taskbar, modeless windows, and responsive behavior, with all six themes selectable at runtime.
+The bundled neutral [desktop mockup](skills/retro-windows-ui/assets/desktop/index.html) remains the complete shell example that ships with the skill. The stills below come from the separate reference build used for this project's portfolio, which swaps in authentic Microsoft themes and wallpapers from the portfolio. They document the target fidelity; no Microsoft media is packaged.
 
-These stills are the mockup itself, captured offline in each theme:
+Desktop icons are hidden so the captures stay neutral, and soft scanlines are applied for presentation.
 
-| Windows Classic | XP Luna Blue | XP Luna Olive |
-| :---: | :---: | :---: |
-| [![Windows Classic desktop mockup](docs/media/themes/classic-crt.webp)](docs/media/themes/classic-crt.webp) | [![XP Luna Blue desktop mockup](docs/media/themes/xp-luna-blue-crt.webp)](docs/media/themes/xp-luna-blue-crt.webp) | [![XP Luna Olive desktop mockup](docs/media/themes/xp-luna-olive-crt.webp)](docs/media/themes/xp-luna-olive-crt.webp) |
-| **XP Luna Silver** | **Windows 7 Aero** | **Windows 7 Basic** |
-| [![XP Luna Silver desktop mockup](docs/media/themes/xp-luna-silver-crt.webp)](docs/media/themes/xp-luna-silver-crt.webp) | [![Windows 7 Aero desktop mockup](docs/media/themes/win7-aero-crt.webp)](docs/media/themes/win7-aero-crt.webp) | [![Windows 7 Basic desktop mockup](docs/media/themes/win7-basic-crt.webp)](docs/media/themes/win7-basic-crt.webp) |
+| Windows 95 · 1995 | Windows 98 · 1998 |
+| :---: | :---: |
+| [![Windows 95 desktop with authentic wallpaper and Settings window](docs/media/showcase/win95.webp)](docs/media/showcase/win95.webp) | [![Windows 98 desktop with authentic wallpaper and Settings window](docs/media/showcase/win98.webp)](docs/media/showcase/win98.webp) |
+| **Windows 2000 · 2000** | **Windows Me · 2000** |
+| [![Windows 2000 desktop with authentic wallpaper and Settings window](docs/media/showcase/win2000.webp)](docs/media/showcase/win2000.webp) | [![Windows Me desktop with authentic wallpaper and Settings window](docs/media/showcase/winme.webp)](docs/media/showcase/winme.webp) |
+| **Windows XP · 2001** | **Windows 7 · 2009** |
+| [![Windows XP desktop with authentic Bliss wallpaper and Settings window](docs/media/showcase/xp.webp)](docs/media/showcase/xp.webp) | [![Windows 7 desktop with authentic wallpaper and Settings window](docs/media/showcase/win7.webp)](docs/media/showcase/win7.webp) |
 
 The skill keeps these eras distinct. Its installable runtime does not bundle Microsoft fonts, logos, extracted icons, wallpapers, or system sounds, and it is not affiliated with or endorsed by Microsoft.
 
@@ -52,7 +54,7 @@ skills/retro-windows-ui/   Portable runtime skill
 evals/                     Agent behavior evaluation scenarios
 tests/                     Deterministic repository tests
 tools/                     Asset generation, packaging, and browser QA
-docs/media/                README screenshots of the bundled mockup and starter
+docs/media/                Documentation-only showcase stills
 ```
 
 ## Use the skill
@@ -69,8 +71,6 @@ In Qoder, run `/skills reload`, verify with `/skills list`, and invoke `/retro-w
 > Build an accessible XP Luna file-transfer dialog with progress, cancel, and error states.
 
 The runtime is offline and framework-free. Open `skills/retro-windows-ui/assets/starter/index.html`, `assets/desktop/index.html`, `assets/boot/index.html`, or `assets/gallery/index.html` directly, or serve the assets directory with any static server.
-
-![Starter page with Display Properties shell](docs/media/starter-crt.webp)
 
 Suggested prompts that exercise the complete kit:
 
@@ -138,4 +138,4 @@ Sound is muted until explicit user opt-in. Every cue has visible feedback, and m
 
 ## License
 
-Repository code and documentation are MIT licensed. Original bundled assets are CC0-1.0; see `skills/retro-windows-ui/assets/LICENSE.txt`. Historical source documents remain linked references under their respective terms.
+Repository code and documentation are MIT licensed. Original bundled assets are CC0-1.0; see `skills/retro-windows-ui/assets/LICENSE.txt`. README showcase stills contain Microsoft-derived reference artwork and are documentation only; they are not part of the installable skill or the CC0 asset license. Historical source documents remain linked references under their respective terms.
