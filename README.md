@@ -1,6 +1,6 @@
 # retro-windows-ui
 
-![The default Windows desktop mockup with My Computer, Notepad, Start menu, and taskbar](docs/media/desktop-mockup.webp)
+![The default Windows desktop mockup with My Computer, Notepad, Start menu, and taskbar](docs/media/desktop-mockup-scanlines.webp)
 
 A portable Agent Skill for designing, building, retrofitting, and reviewing retro Windows interfaces. It combines era-specific design guidance with complete original offline asset families, semantic tokens, a default Windows desktop mockup, startup-screen examples, an interactive gallery, and opt-in UI sound effects.
 
@@ -35,9 +35,9 @@ These stills are the mockup itself, captured offline in each theme:
 
 | Windows Classic | XP Luna Blue | XP Luna Olive |
 | :---: | :---: | :---: |
-| [![Windows Classic desktop mockup](docs/media/themes/classic.webp)](docs/media/themes/classic.webp) | [![XP Luna Blue desktop mockup](docs/media/themes/xp-luna-blue.webp)](docs/media/themes/xp-luna-blue.webp) | [![XP Luna Olive desktop mockup](docs/media/themes/xp-luna-olive.webp)](docs/media/themes/xp-luna-olive.webp) |
+| [![Windows Classic desktop mockup](docs/media/themes/classic-scanlines.webp)](docs/media/themes/classic-scanlines.webp) | [![XP Luna Blue desktop mockup](docs/media/themes/xp-luna-blue-scanlines.webp)](docs/media/themes/xp-luna-blue-scanlines.webp) | [![XP Luna Olive desktop mockup](docs/media/themes/xp-luna-olive-scanlines.webp)](docs/media/themes/xp-luna-olive-scanlines.webp) |
 | **XP Luna Silver** | **Windows 7 Aero** | **Windows 7 Basic** |
-| [![XP Luna Silver desktop mockup](docs/media/themes/xp-luna-silver.webp)](docs/media/themes/xp-luna-silver.webp) | [![Windows 7 Aero desktop mockup](docs/media/themes/win7-aero.webp)](docs/media/themes/win7-aero.webp) | [![Windows 7 Basic desktop mockup](docs/media/themes/win7-basic.webp)](docs/media/themes/win7-basic.webp) |
+| [![XP Luna Silver desktop mockup](docs/media/themes/xp-luna-silver-scanlines.webp)](docs/media/themes/xp-luna-silver-scanlines.webp) | [![Windows 7 Aero desktop mockup](docs/media/themes/win7-aero-scanlines.webp)](docs/media/themes/win7-aero-scanlines.webp) | [![Windows 7 Basic desktop mockup](docs/media/themes/win7-basic-scanlines.webp)](docs/media/themes/win7-basic-scanlines.webp) |
 
 The skill keeps these eras distinct. Its installable runtime does not bundle Microsoft fonts, logos, extracted icons, wallpapers, or system sounds, and it is not affiliated with or endorsed by Microsoft.
 
@@ -70,7 +70,7 @@ In Qoder, run `/skills reload`, verify with `/skills list`, and invoke `/retro-w
 
 The runtime is offline and framework-free. Open `skills/retro-windows-ui/assets/starter/index.html`, `assets/desktop/index.html`, `assets/boot/index.html`, or `assets/gallery/index.html` directly, or serve the assets directory with any static server.
 
-![Starter page with Display Properties shell](docs/media/starter.webp)
+![Starter page with Display Properties shell](docs/media/starter-scanlines.webp)
 
 Suggested prompts that exercise the complete kit:
 
