@@ -1,0 +1,31 @@
+.gallery-heading { width: min(980px, 100%); margin: 0 auto 14px; color: #fff; text-shadow: 0 1px 2px #000; }
+.gallery-heading h1 { margin: 0 0 4px; font-size: 20px; font-weight: 400; }
+.gallery-heading p { margin: 0; }
+.gallery-section { width: min(980px, calc(100vw - 36px)); }
+.gallery-section > .titlebar h2 { font-weight: 700; }
+.component-label { margin: 0; color: var(--rw-text-secondary); font-weight: 700; }
+.component-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 11px; }
+.component-panel { min-width: 0; padding: 8px; background: var(--rw-surface-window-solid); border: 1px solid var(--rw-border-highlight); }
+.component-panel > :last-child { margin-bottom: 0; }
+.is-focused { outline: 2px solid var(--rw-focus-color) !important; outline-offset: var(--rw-focus-offset); }
+.is-selected { color: var(--rw-selection-text) !important; background: var(--rw-selection-background) !important; background-image: var(--rw-gradient-selection) !important; }
+.is-error { border-color: var(--rw-status-error) !important; }
+.error-text { color: var(--rw-status-error); }
+.success-text { color: var(--rw-status-success); }
+.tree { padding-left: 18px; }
+.tree li { list-style: none; }
+.tree li::before { content: "├─ "; color: var(--rw-text-secondary); }
+.tree li:last-child::before { content: "└─ "; }
+.window-pair { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 11px; }
+.window-pair .window { width: 100%; margin: 0; }
+.gallery-taskbar-demo { position: relative; min-height: 110px; padding-bottom: 0; overflow: hidden; background: var(--rw-gradient-desktop); border: 1px solid var(--rw-border-dark); }
+.gallery-taskbar-demo .taskbar { position: absolute; }
+.gallery-taskbar-demo .start-menu { position: absolute; }
+.audio-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 7px; }
+.audio-matrix .button { width: 100%; }
+.gallery-footer { width: min(980px, calc(100vw - 36px)); margin: 0 auto; }
+.gallery-footer .statusbar { border: 1px solid var(--rw-border-dark); }
+@media (max-width: 650px) {
+  .window-pair { grid-template-columns: 1fr; }
+  .gallery-section, .gallery-footer { width: 100%; }
+}

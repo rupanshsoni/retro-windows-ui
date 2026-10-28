@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.0.0",
+  "identity": {
+    "id": "windows-7-aero",
+    "name": "Windows 7 Aero",
+    "family": "windows-7",
+    "era": "Windows 7",
+    "variant": "aero",
+    "description": "Translucent glass, soft highlights, and layered depth."
+  },
+  "typography": {
+    "fontFamily": "'Segoe UI', Tahoma, Geneva, sans-serif",
+    "fontFamilyMono": "'Courier New', Courier, monospace",
+    "roles": {
+      "body": {
+        "size": "12px",
+        "weight": 400,
+        "lineHeight": "1.4"
+      },
+      "windowTitle": {
+        "size": "12px",
+        "weight": 400,
+        "lineHeight": "1.1"
+      },
+      "menu": {
+        "size": "12px",
+        "weight": 400,
+        "lineHeight": "1.25"
+      },
+      "small": {
+        "size": "10px",
+        "weight": 400,
+        "lineHeight": "1.3"
+      },
+      "code": {
+        "size": "11px",
+        "weight": 400,
+        "lineHeight": "1.4"
+      }
+    }
+  },
+  "colors": {
+    "surface": {
+      "desktop": "#214f70",
+      "window": "rgb(239 248 252 / 82%)",
+      "windowSolid": "#eef3f5",
+      "control": "#f4f8fa",
+      "input": "#ffffff",
+      "inset": "#ffffff",
+      "menu": "rgb(248 252 255 / 94%)",
+      "tooltip": "#ffffe1",
+      "overlay": "rgb(3 18 30 / 42%)"
+    },
+    "text": {
+      "primary": "#17232b",
+      "secondary": "#34444e",
+      "muted": "#4d5b63",
+      "disabled": "#7b858a",
+      "inverse": "#ffffff",
+      "link": "#0645ad",
+      "error": "#a40000"
+    },
+    "border": {
+      "default": "#6f8794",
+      "light": "#ffffff",
+      "dark": "#365265",
+      "shadow": "#243b49",
+      "highlight": "#d9f0fa"
+    },
+    "bevel": {
+      "outerLight": "#ffffff",
+      "outerDark": "#547487",
+      "innerLight": "#eaf8ff",
+      "innerDark": "#9db6c4",
+      "pressedLight": "#7faabd",
+      "pressedDark": "#ffffff"
+    },
+    "selection": {
+      "background": "#b7def3",
+      "text": "#102b40",
+      "inactiveBackground": "#d7dde0",
+      "inactiveText": "#4b555b"
+    },
+    "focus": {
+      "color": "#177da8",
+      "ring": "1px dotted #176785",
+      "alternate": "#ffffff"
+    },
+    "titlebar": {
+      "activeBackground": "rgb(220 240 250 / 66%)",
+      "activeBackgroundEnd": "#a8d2e5",
+      "activeText": "#102b40",
+      "inactiveBackground": "#d5dde1",
+      "inactiveBackgroundEnd": "#edf1f3",
+      "inactiveText": "#53616a",
+      "button": "#d7edf6",
+      "buttonText": "#17394e"
+    },
+    "taskbar": {
+      "background": "rgb(15 35 50 / 86%)",
+      "backgroundEnd": "#527b93",
+      "text": "#ffffff",
+      "button": "#416a84",
+      "activeButton": "#7298ad",
+      "activeText": "#ffffff"
+    },
+    "status": {
+      "background": "#e5f0f5",
+      "text": "#17232b",
+      "info": "#146b91",
+      "success": "#26732d",
+      "warning": "#795400",
+      "error": "#a40000"
+    }
+  },
+  "metrics": {
+    "controlHeight": "23px",
+    "borderWidth": "1px",
+    "bevelWidth": "1px",
+    "titlebarHeight": "30px",
+    "titlebarButtonSize": "28px",
+    "taskbarHeight": "40px",
+    "iconSize": "24px",
+    "checkboxSize": "15px",
+    "scrollbarWidth": "17px",
+    "menuMinWidth": "176px",
+    "focusOffset": "3px"
+  },
+  "spacing": {
+    "unit": "4px",
+    "xs": "2px",
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "xxl": "24px"
+  },
+  "radius": {
+    "none": "0px",
+    "control": "3px",
+    "window": "8px",
+    "menu": "4px",
+    "selection": "2px"
+  },
+  "gradients": {
+    "desktop": "radial-gradient(circle at 70% 20%, #4c89a9 0%, #214f70 42%, #102f4b 100%)",
+    "titleActive": "linear-gradient(135deg, rgb(255 255 255 / 78%), rgb(174 217 237 / 42%))",
+    "titleInactive": "linear-gradient(180deg, rgb(242 246 248 / 72%), rgb(204 214 220 / 55%))",
+    "button": "linear-gradient(180deg, rgb(255 255 255 / 92%), rgb(218 235 244 / 76%))",
+    "taskbar": "linear-gradient(180deg, rgb(93 133 156 / 60%), rgb(7 23 35 / 90%))",
+    "selection": "linear-gradient(180deg, #dceffc, #a9d7f2)",
+    "progress": "linear-gradient(180deg, #a9e9f5, #2ca8ca 55%, #167a9c)"
+  },
+  "shadows": {
+    "window": "0 12px 36px rgb(0 15 28 / 48%), 0 0 0 1px rgb(255 255 255 / 38%)",
+    "menu": "0 6px 18px rgb(0 0 0 / 32%)",
+    "focus": "0 0 5px rgb(77 177 220 / 75%)",
+    "dialog": "0 16px 42px rgb(0 0 0 / 48%)"
+  },
+  "motion": {
+    "durationFast": "100ms",
+    "durationNormal": "180ms",
+    "durationSlow": "280ms",
+    "easing": "cubic-bezier(.2,.7,.2,1)"
+  },
+  "contrastPairs": {
+    "body": {
+      "foreground": "#17232b",
+      "background": "#eef3f5",
+      "minimumRatio": 4.5
+    },
+    "titlebar": {
+      "foreground": "#102b40",
+      "background": "#dceef5",
+      "minimumRatio": 4.5
+    },
+    "selection": {
+      "foreground": "#102b40",
+      "background": "#b7def3",
+      "minimumRatio": 4.5
+    },
+    "status": {
+      "foreground": "#17232b",
+      "background": "#e5f0f5",
+      "minimumRatio": 4.5
+    }
+  },
+  "assets": {
+    "icons": "../icons/windows-7-aero/icons.svg",
+    "decorations": "../decorations/windows-7-aero/decorations.svg",
+    "texture": "../textures/windows-7-aero.svg",
+    "audio": {
+      "activate": "../audio/activate.wav",
+      "notify": "../audio/notify.wav",
+      "complete": "../audio/complete.wav",
+      "error": "../audio/error.wav"
+    }
+  }
+}

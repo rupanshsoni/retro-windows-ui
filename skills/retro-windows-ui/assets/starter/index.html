@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" data-theme="xp-luna-blue">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retro Windows UI Starter</title>
+  <link rel="stylesheet" href="../tokens/themes.css">
+  <link rel="stylesheet" href="starter.css">
+  <script src="starter.js" defer></script>
+</head>
+<body>
+  <main class="desktop" data-retro-app>
+    <aside class="preview-tools" aria-label="Preview settings">
+      <div class="field">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select" data-theme-select>
+          <option value="classic">Windows Classic</option>
+          <option value="xp-luna-blue" selected>XP Luna Blue</option>
+          <option value="xp-luna-olive">XP Luna Olive</option>
+          <option value="xp-luna-silver">XP Luna Silver</option>
+          <option value="windows-7-aero">Windows 7 Aero</option>
+          <option value="windows-7-basic">Windows 7 Basic</option>
+        </select>
+      </div>
+      <label class="check"><input id="reduced-transparency" type="checkbox" data-reduced-transparency-control> Opaque surfaces</label>
+      <label class="check"><input id="reduced-motion" type="checkbox" data-reduced-motion-control> Reduce motion</label>
+      <label class="check"><input id="sound-enabled" type="checkbox" data-sound-enable> Enable sound</label>
+      <button class="button compact" id="mute-sound" type="button" data-mute aria-pressed="false">Mute</button>
+      <div class="field">
+        <label for="sound-volume">Volume</label>
+        <input id="sound-volume" type="range" min="0" max="100" value="35" data-volume>
+      </div>
+    </aside>
+
+    <section class="window active" id="settings-window" data-window="settings" aria-labelledby="settings-title">
+      <header class="titlebar">
+        <img class="icon" data-icon="settings" src="../icons/xp-luna-blue/settings.svg" alt="">
+        <h1 class="window-title" id="settings-title">Display Properties</h1>
+        <div class="titlebar-actions">
+          <button class="caption-button" type="button" data-window-action="minimize" aria-label="Minimize Display Properties">_</button>
+          <button class="caption-button" type="button" data-window-action="maximize" aria-label="Maximize Display Properties">□</button>
+          <button class="caption-button" type="button" data-window-action="close" aria-label="Close Display Properties">×</button>
+        </div>
+      </header>
+      <nav class="menubar" aria-label="Application menu">
+        <div>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="file-menu">File</button>
+          <div class="menu-popup" id="file-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" type="button" data-open-dialog>Properties…</button>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="Settings saved" data-cue="complete">Save settings</button>
+            <div class="menu-separator" role="separator"></div>
+            <button class="menu-item" role="menuitem" type="button" data-window-action="close">Close</button>
+          </div>
+        </div>
+        <div>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="edit-menu">Edit</button>
+          <div class="menu-popup" id="edit-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="Preferences reset" data-cue="notify">Reset preferences</button>
+            <button class="menu-item" role="menuitem" type="button" disabled>Paste unavailable</button>
+          </div>
+        </div>
+      </nav>
+      <div class="toolbar" aria-label="Actions">
+        <button class="button compact" type="button" data-open-dialog>
+          <img class="icon" data-icon="folder" src="../icons/xp-luna-blue/folder.svg" alt="">
+          Open…
+        </button>
+        <button class="button compact" type="button" data-feedback="Search completed" data-cue="complete">
+          <img class="icon" data-icon="search" src="../icons/xp-luna-blue/search.svg" alt="">
+          Search
+        </button>
+      </div>
+      <div class="window-body">
+        <p class="main-instruction">Choose how the desktop and notifications appear.</p>
+        <div class="tabs" role="tablist" aria-label="Settings categories">
+          <button class="tab" id="general-tab" type="button" role="tab" aria-selected="true" aria-controls="general-panel">General</button>
+          <button class="tab" id="advanced-tab" type="button" role="tab" aria-selected="false" aria-controls="advanced-panel" tabindex="-1">Advanced</button>
+        </div>
+        <section class="tab-panel" id="general-panel" role="tabpanel" aria-labelledby="general-tab">
+          <div class="grid-2">
+            <div>
+              <div class="field">
+                <label for="computer-name">Computer name</label>
+                <input id="computer-name" type="text" value="RETRO-STATION">
+              </div>
+              <div class="field">
+                <label for="location">Location</label>
+                <select id="location"><option>Home office</option><option>Studio</option><option>Portable</option></select>
+              </div>
+              <fieldset>
+                <legend>Notifications</legend>
+                <label class="check"><input type="checkbox" checked> Show visual notifications</label>
+                <label class="check"><input type="checkbox" checked> Group similar messages</label>
+                <label class="radio"><input type="radio" name="density" checked> Compact density</label>
+                <label class="radio"><input type="radio" name="density"> Comfortable density</label>
+              </fieldset>
+            </div>
+            <div>
+              <span class="field-label" id="files-label">Recent files</span>
+              <ul class="listbox" role="listbox" aria-labelledby="files-label" tabindex="0">
+                <li role="option" aria-selected="true" tabindex="-1"><img class="icon" data-icon="document" src="../icons/xp-luna-blue/document.svg" alt="">Project notes.txt</li>
+                <li role="option" aria-selected="false" tabindex="-1"><img class="icon" data-icon="folder" src="../icons/xp-luna-blue/folder.svg" alt="">Shared documents</li>
+                <li role="option" aria-selected="false" tabindex="-1"><img class="icon" data-icon="document" src="../icons/xp-luna-blue/document.svg" alt="">Settings backup.ini</li>
+              </ul>
+              <div class="field" style="margin-top: 11px">
+                <label for="transfer-progress">Transfer progress <output id="progress-output">64%</output></label>
+                <progress id="transfer-progress" max="100" value="64">64%</progress>
+              </div>
+              <button class="button compact" type="button" data-progress>Advance progress</button>
+            </div>
+          </div>
+        </section>
+        <section class="tab-panel" id="advanced-panel" role="tabpanel" aria-labelledby="advanced-tab" hidden>
+          <div class="field">
+            <label for="device-notes">Device notes</label>
+            <textarea id="device-notes">Local-only preview. No network resources are required.</textarea>
+          </div>
+          <div class="field">
+            <label for="refresh-rate">Refresh rate <output id="refresh-output">60 Hz</output></label>
+            <input id="refresh-rate" type="range" min="30" max="120" value="60" data-output="refresh-output" data-suffix=" Hz">
+          </div>
+          <label class="check"><input type="checkbox" disabled> Unavailable legacy option</label>
+        </section>
+        <div class="button-row">
+          <button class="button default" type="button" data-feedback="Settings applied successfully" data-cue="complete">OK</button>
+          <button class="button" type="button" data-feedback="No changes applied" data-cue="notify">Cancel</button>
+          <button class="button" type="button" disabled>Apply</button>
+        </div>
+      </div>
+      <footer class="statusbar"><span id="status-message" role="status" aria-live="polite">Ready</span><span>Local only</span></footer>
+    </section>
+
+    <section class="window secondary inactive" id="notes-window" data-window="notes" aria-labelledby="notes-title">
+      <header class="titlebar">
+        <img class="icon" data-icon="document" src="../icons/xp-luna-blue/document.svg" alt="">
+        <h2 class="window-title" id="notes-title">Read Me.txt</h2>
+        <div class="titlebar-actions">
+          <button class="caption-button" type="button" data-window-action="minimize" aria-label="Minimize Read Me">_</button>
+          <button class="caption-button" type="button" data-window-action="close" aria-label="Close Read Me">×</button>
+        </div>
+      </header>
+      <div class="window-body">
+        <p>This second window demonstrates active/inactive chrome and taskbar restoration.</p>
+        <p class="long-label">Long labels wrap or reflow instead of forcing inaccessible clipped controls at higher text sizes.</p>
+      </div>
+      <footer class="statusbar"><span>2 paragraphs</span></footer>
+    </section>
+
+    <div class="taskbar" role="toolbar" aria-label="Taskbar">
+      <button class="button compact start-button" id="start-button" type="button" aria-expanded="false" aria-controls="start-menu">Start</button>
+      <div class="taskbar-buttons">
+        <button class="taskbar-button" type="button" data-task-window="settings" aria-pressed="true">Display Properties</button>
+        <button class="taskbar-button" type="button" data-task-window="notes" aria-pressed="false">Read Me.txt</button>
+      </div>
+      <span class="tray" id="tray-status">Sound off</span>
+    </div>
+    <div class="menu-popup start-menu" id="start-menu" role="menu" hidden>
+      <button class="menu-item" role="menuitem" type="button" data-open-dialog><img class="icon" data-icon="settings" src="../icons/xp-luna-blue/settings.svg" alt="">Control Panel</button>
+      <button class="menu-item" role="menuitem" type="button" data-feedback="Search opened" data-cue="activate"><img class="icon" data-icon="search" src="../icons/xp-luna-blue/search.svg" alt="">Search</button>
+      <div class="menu-separator" role="separator"></div>
+      <button class="menu-item" role="menuitem" type="button" data-feedback="Help is available in the local design references">Help and Support</button>
+    </div>
+  </main>
+
+  <dialog id="properties-dialog" aria-labelledby="dialog-title">
+    <form method="dialog">
+      <header class="titlebar"><h2 class="window-title" id="dialog-title">Advanced Properties</h2></header>
+      <div class="window-body">
+        <div class="notification"><img class="icon" data-icon="info" src="../icons/xp-luna-blue/info.svg" alt=""><span>Modal focus stays here until you choose an action or press Escape.</span></div>
+        <div class="field" style="margin-top: 11px"><label for="profile-name">Profile name</label><input id="profile-name" type="text" value="Retro workstation"></div>
+        <div class="button-row">
+          <button class="button default" value="ok" data-dialog-result="Profile saved" data-cue="complete">OK</button>
+          <button class="button" value="cancel" data-dialog-result="Changes cancelled">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

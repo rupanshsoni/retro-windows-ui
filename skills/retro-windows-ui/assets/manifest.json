@@ -1,0 +1,1686 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "retro-windows-ui original offline assets",
+  "license": "CC0-1.0",
+  "independentUnofficial": true,
+  "generatedBy": "tools/build_assets.py",
+  "assetCount": 98,
+  "assets": [
+    {
+      "path": "LICENSE.txt",
+      "kind": "license",
+      "mediaType": "text/plain",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 1472,
+      "sha256": "53707b57fb6b809de8ffedafcc56ee0941563ecf7b9ac60fa180fa2088341855"
+    },
+    {
+      "path": "audio/activate.wav",
+      "kind": "audio-cue",
+      "mediaType": "audio/wav",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original synthesized sine-wave composition; no sampled or prerecorded audio used.",
+      "license": "CC0-1.0",
+      "bytes": 17684,
+      "sha256": "528bd84dfc58436a11e4a68fef2489d10d3a538fac6747451fccfe38b33b5f0d",
+      "era": "cross-era original cues",
+      "audio": {
+        "durationSeconds": 0.2,
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "frames": 8820,
+        "peakAmplitude": 16359,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "path": "audio/complete.wav",
+      "kind": "audio-cue",
+      "mediaType": "audio/wav",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original synthesized sine-wave composition; no sampled or prerecorded audio used.",
+      "license": "CC0-1.0",
+      "bytes": 45908,
+      "sha256": "4bac7d2a3d1ad2350e5ceb75e21ea7ff42977ddf12c1cbcfd1fde08b6b5e98aa",
+      "era": "cross-era original cues",
+      "audio": {
+        "durationSeconds": 0.52,
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "frames": 22932,
+        "peakAmplitude": 18154,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "path": "audio/error.wav",
+      "kind": "audio-cue",
+      "mediaType": "audio/wav",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original synthesized sine-wave composition; no sampled or prerecorded audio used.",
+      "license": "CC0-1.0",
+      "bytes": 28268,
+      "sha256": "8e6979c1de165e96296316f3ec3824106f53c506e6aae15fbf3ef347e3a00282",
+      "era": "cross-era original cues",
+      "audio": {
+        "durationSeconds": 0.32,
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "frames": 14112,
+        "peakAmplitude": 18154,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "path": "audio/notify.wav",
+      "kind": "audio-cue",
+      "mediaType": "audio/wav",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original synthesized sine-wave composition; no sampled or prerecorded audio used.",
+      "license": "CC0-1.0",
+      "bytes": 30032,
+      "sha256": "c799d424376e834221f296a2eadfa762cf02417a20235f06732e0c503d57323c",
+      "era": "cross-era original cues",
+      "audio": {
+        "durationSeconds": 0.34,
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "frames": 14994,
+        "peakAmplitude": 18148,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "path": "contact-sheet.html",
+      "kind": "contact-sheet",
+      "mediaType": "text/html",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 12484,
+      "sha256": "1b4e5e33055a11f7f2dcf65fb74c4978087bc0f96b6c333f35a267a49715e466"
+    },
+    {
+      "path": "decorations/classic/close.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 261,
+      "sha256": "238fc3509d2248b8654d8e4a1caf285b9d6750a89124d18824fb6bd63a25d80e",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/classic/decorations.svg",
+      "kind": "decoration-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 809,
+      "sha256": "691a39e05eb47ea8db64d6c8c6e42727946c681dac39b7e45d1056e7bb9c9ff0",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/classic/maximize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 276,
+      "sha256": "3c4b5d3f61a8598784459e83566ab960c112ad4f20e2cced4c975b25651ef4d3",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/classic/minimize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 255,
+      "sha256": "c4f5d6af7a1158fcf77bc412fa2b67190d031abec4d4bd5674aeaab766f2bf91",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/classic/restore.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 266,
+      "sha256": "4cb785d5128d7e85b29b373b73195d7c92192c63e9df2345a1d31b2cd1fc9ab1",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-aero/close.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 395,
+      "sha256": "cf6e2f2510849966b426b2abd7a67ee8feda6c25e6608fca2cc8a53e4f9f47a8",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-aero/decorations.svg",
+      "kind": "decoration-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1323,
+      "sha256": "db0e64df10ad98fdb30b8c63115894144f750fa7441755cea7e5ac9f38e653bb",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-aero/maximize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 422,
+      "sha256": "95048b1f5f825ba9e9e5fbfb6f8c486919cb3dff6a141eea35ab04fb04c31fbc",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-aero/minimize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 380,
+      "sha256": "443728f36cbfd501b1d437d682f3c7489e9e22c059035ec2232cabacc3dcea16",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-aero/restore.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 403,
+      "sha256": "7a6522080b89a696258e4b9deaef9bb21c048a1fe59d55b71700515c9bd509bb",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-basic/close.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 396,
+      "sha256": "8ab52a1353d63903821c28a990d305ec88bf6cfd98bf0f354413a2ee9295af2e",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-basic/decorations.svg",
+      "kind": "decoration-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1323,
+      "sha256": "d0d7c68b79c97ed803664f7729ed30cc26e1fbc1b55bae3d76e06e545fe8c056",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-basic/maximize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 423,
+      "sha256": "277797bc605226e6352735467352edf93f2ceb71010cbf6ffc6ccf352f9575d2",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-basic/minimize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 381,
+      "sha256": "c491273bd07973054fb1b9834593cddcf16a9169dc0cfee9a5dc978de76c9ff2",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/windows-7-basic/restore.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 404,
+      "sha256": "d6f43734508bf5348297f544b6a54d3a603ff4244ca2276e76cdb175a891098b",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-blue/close.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 393,
+      "sha256": "eb34f8af6b93af99c3a81558dbd6cb5d6ef676b6716dd2b5f0940bbd97e36e7e",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-blue/decorations.svg",
+      "kind": "decoration-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1323,
+      "sha256": "d0d7c68b79c97ed803664f7729ed30cc26e1fbc1b55bae3d76e06e545fe8c056",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-blue/maximize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 420,
+      "sha256": "8848e77937c4e8d6d10b477d6752fc24ae90993d3556e80accaec2582e3c3760",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-blue/minimize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 378,
+      "sha256": "5dbc0891c1f8187e450890688e67c528302b77ef4c9b527b336c599c535b69a9",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-blue/restore.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 401,
+      "sha256": "c92b0902c2c3894b840e3f37c6c5ed4af34b5adb386f2c12687f231f779c4ac2",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-olive/close.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 394,
+      "sha256": "71e630024aae48abcd10971692746e5904c59a679f34596982806dba139cf1c6",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-olive/decorations.svg",
+      "kind": "decoration-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1323,
+      "sha256": "d0d7c68b79c97ed803664f7729ed30cc26e1fbc1b55bae3d76e06e545fe8c056",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-olive/maximize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 421,
+      "sha256": "30169edebf159bdf569b1c3e3aee52be3f8d0d735ecbffd45debaae8538d7d5b",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-olive/minimize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 379,
+      "sha256": "d923b8a755547ba364b15f3e6f05a9b944b5c25414ada4cc3dee1731afbd6b11",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-olive/restore.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 402,
+      "sha256": "dd73ccd2e8aa3781a8dcf8e030211574a1fc75a8def297c34129e0046217aefc",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-silver/close.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 395,
+      "sha256": "0613441f5eb0acddd59d7a2b2c9a8ccdda45d839b856347b5efbb3b2af1d8764",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-silver/decorations.svg",
+      "kind": "decoration-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1323,
+      "sha256": "db0e64df10ad98fdb30b8c63115894144f750fa7441755cea7e5ac9f38e653bb",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-silver/maximize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 422,
+      "sha256": "4f6ecbda6890ddbb3b1fc93a9c9b97e1a0bf5bd09d3e629825f0ebbeb808abfd",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-silver/minimize.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 380,
+      "sha256": "1796a5572714c705e9e2c0737436f16dc341302100a829fa16cbb1c4435a8be4",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "decorations/xp-luna-silver/restore.svg",
+      "kind": "decoration-glyph",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 403,
+      "sha256": "3d08e2c13b3f1427e2ca08c624a38ae885ae565e7828313312ed15c2f026f787",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 16 16",
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "path": "gallery/gallery.css",
+      "kind": "stylesheet",
+      "mediaType": "text/css",
+      "source": "Original hand-authored example",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original hand-authored offline HTML, CSS, and JavaScript example.",
+      "license": "CC0-1.0",
+      "bytes": 2211,
+      "sha256": "cfc2ad92c4678d3ee35f5bbd5e29462d980b4757df06f5cf86696dbf0905e0c1"
+    },
+    {
+      "path": "gallery/gallery.js",
+      "kind": "script",
+      "mediaType": "text/javascript",
+      "source": "Original hand-authored example",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original hand-authored offline HTML, CSS, and JavaScript example.",
+      "license": "CC0-1.0",
+      "bytes": 847,
+      "sha256": "2b35900eba4cd4a8c31068a245506c19ee5ea1621a577146d6bd94aa3d384328"
+    },
+    {
+      "path": "gallery/index.html",
+      "kind": "example",
+      "mediaType": "text/html",
+      "source": "Original hand-authored example",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original hand-authored offline HTML, CSS, and JavaScript example.",
+      "license": "CC0-1.0",
+      "bytes": 15113,
+      "sha256": "61dfc37b4d7ab7a9c4b6adcb2324b24bf5c6d084d3d9f6c0513f5862a8459894"
+    },
+    {
+      "path": "icons/classic/document.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 840,
+      "sha256": "4eeec1a20f842fdad59e098b95387cd5b663e88d7a6d6139400524510339fffe",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/classic/folder.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 856,
+      "sha256": "c3c3b9fbb4f4caf9210461e40d0d24dbb3aa3bdadd1c68aba59774544b923c61",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/classic/icons.svg",
+      "kind": "icon-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 2644,
+      "sha256": "04894e839e0a3279d84101a914f5ea9b3ecf2ff880b4749320ce77716f7e725a",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/classic/info.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 843,
+      "sha256": "bfa6d33d775e6fab5ba06f5d20cc409d54d911337c42a132a616adf238881e3a",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/classic/search.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 881,
+      "sha256": "4d8957359b58fb6e95e4736969c4e074c9fb98b28fce843ffad4053ae4b17700",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/classic/settings.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1194,
+      "sha256": "4276af37e8465108b30cedcd2f9556c39535abe12a2221330b83b998cba27b7e",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/classic/warning.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 867,
+      "sha256": "4f2df7a4af65553fdb14b2309eee551f8e1ca104350def8fade7e400f390f173",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-aero/document.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 922,
+      "sha256": "12f329ea94136b5417b5603905bc71c45a0d6374d2bf1a9783315bc50371197e",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-aero/folder.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 945,
+      "sha256": "16b4ba15f73662c1e2ed0de2ae94d2d5c3bd9472bcb260d78c7f12e0ca31af3c",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-aero/icons.svg",
+      "kind": "icon-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 2936,
+      "sha256": "c4a48c9e24bfeba028a6a1e6039c828bf9ec655dd58200221969c8afcac0c306",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-aero/info.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 918,
+      "sha256": "74229a47ee4c91be757459007fdb593b0afe8d1bdffd31a88f51705685ed3b63",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-aero/search.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 974,
+      "sha256": "813730e42e23536eddff9073ceb4168d4b1a4bba55fa96cd0e1983b8ef417b77",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-aero/settings.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1287,
+      "sha256": "941b7a20119b82523a171640d6861230f3967a5047d0bd1480e3eb6b24d8201e",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-aero/warning.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 949,
+      "sha256": "c978b5c27ff82cd0442ad91bd1da6c67cedb8dc9ebb5f7c872aec62fd8a50d3e",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-basic/document.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 913,
+      "sha256": "8fa1502b7f961d01de26e3c54f28d95533b80f8993710f0450379089e7998aed",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-basic/folder.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 937,
+      "sha256": "70aae8752695ccaa7ec393923afae2f4052156ec4148ad463ba8f091d78eba9c",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-basic/icons.svg",
+      "kind": "icon-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 2904,
+      "sha256": "19f0e220d1779f1310f515e0adf37acfce2d179dfb033be24f84386932d0e82a",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-basic/info.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 908,
+      "sha256": "67567b37f997144f0df527739b6c0bb4c6860752ce7ff19d5ce0f903c4e2475d",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-basic/search.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 949,
+      "sha256": "6bc2c9e7440c1ba4143622010b8e2b76ef8bad78c7fc13ac0584cceb5a67d03a",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-basic/settings.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1262,
+      "sha256": "4b01929cc22c701ebf5eb690074925abd31285abe72a929de4c7d040eaa346fe",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/windows-7-basic/warning.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 940,
+      "sha256": "a40751e949fde86cb16cae813cac93718e341fc478fdabdf4fe380314afae8de",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-blue/document.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 895,
+      "sha256": "ba5c013187bd2945694a6a838584700d38448771319672dd11e9568eb03afa05",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-blue/folder.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 916,
+      "sha256": "ef0e8997f14fbd603fb6228ee214208b34e2fd55cac08511c8da03fed87029d2",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-blue/icons.svg",
+      "kind": "icon-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 2865,
+      "sha256": "fd9f60eab9c3021eea25ea1b3cb5e963632c820346cc01fb788306a5311ebe02",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-blue/info.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 893,
+      "sha256": "7c2432f8a15fd626a38071cdf81a88a6197359e8780e6b75910858e1d704be51",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-blue/search.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 934,
+      "sha256": "7fc286bdd5642f9427a01f5a76cbde792d7054293152ba4b1277713b7f5ab6f2",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-blue/settings.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1247,
+      "sha256": "ad4c507a137788af07e18179eae4d703ee0d0c1b5c03d81ef25aba460041b38a",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-blue/warning.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 922,
+      "sha256": "ab7330280003d98e52df82fa1ac474d1db2aed4f13a090568fb2295ff6eb4463",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-olive/document.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 901,
+      "sha256": "20ef23b4fb1ecb7757a683c4519bd9c871cbb7b65438f122703048457c067495",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-olive/folder.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 923,
+      "sha256": "f804cbb617b350c0dabd268c436ba97c7cdf344f7f330705783b93846d99c0d6",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-olive/icons.svg",
+      "kind": "icon-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 2878,
+      "sha256": "3c38eecdef9ff3825316ae6921106bee5b07fea890ff90609745e1883f7f9600",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-olive/info.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 898,
+      "sha256": "d0273ef5fba7ca505310eec45eec7efd90c7ccca0752fb1d9305c9ba7ec2156e",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-olive/search.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 939,
+      "sha256": "70cacb6abe00fac03716f9e2460eee739b48e0811d1a7838c4dac1c793638921",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-olive/settings.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1252,
+      "sha256": "7e5ea7d456cdf222d03c95165601ddb2736de0cb58daf53154dae9df459c10d6",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-olive/warning.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 928,
+      "sha256": "1748e629aeb27b7c87cd97b1e29f14dff8c10d9e3ace1a912aa751e95f6fc8cf",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-silver/document.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 907,
+      "sha256": "ab047aea26266a27fe2738a83da3fe5e2e669fe36f313d6fa045108bdd07aa46",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-silver/folder.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 930,
+      "sha256": "57586ca84ed8ed043103f041e33cccce7dba710261cae5d046d64ad014342fcc",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-silver/icons.svg",
+      "kind": "icon-sprite",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 2891,
+      "sha256": "cf532f4b142204ba39f30584698406f0abdb518b478d06722403e4de54a4f82e",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-silver/info.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 903,
+      "sha256": "70d210a7f28eb5c109a71fe4879a56331ebe031b33359adddae7ab9d9704abd9",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-silver/search.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 944,
+      "sha256": "a0fe8e669b1c21f7e04c31c72db8fc12d11eca00ac17118c2b8f619626f23c34",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-silver/settings.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 1257,
+      "sha256": "29440d900e92a5f5576cb9f7d248f9daee75ada8544f806cda08d41a0e60a6cd",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "icons/xp-luna-silver/warning.svg",
+      "kind": "icon",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 934,
+      "sha256": "b7c5d028801ae5963ac353ffe7c1ab8e0123354f065da12f33b4f1b237cdaff9",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 24 24",
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "path": "starter/index.html",
+      "kind": "example",
+      "mediaType": "text/html",
+      "source": "Original hand-authored example",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original hand-authored offline HTML, CSS, and JavaScript example.",
+      "license": "CC0-1.0",
+      "bytes": 11412,
+      "sha256": "ae21bc4ef9f997fd65cd604d460700d81cc659b9e8643d3161cc3943cd884902"
+    },
+    {
+      "path": "starter/starter.css",
+      "kind": "stylesheet",
+      "mediaType": "text/css",
+      "source": "Original hand-authored example",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original hand-authored offline HTML, CSS, and JavaScript example.",
+      "license": "CC0-1.0",
+      "bytes": 14190,
+      "sha256": "1dc846a10d53e171084f401de779b9fa07bd3f83d4c1125045c9f5f6bf6d3afc"
+    },
+    {
+      "path": "starter/starter.js",
+      "kind": "script",
+      "mediaType": "text/javascript",
+      "source": "Original hand-authored example",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original hand-authored offline HTML, CSS, and JavaScript example.",
+      "license": "CC0-1.0",
+      "bytes": 17013,
+      "sha256": "cf3521454e52c69e5209f1ffc23010de7821bb10c0978a611333b16764c69280"
+    },
+    {
+      "path": "textures/classic.svg",
+      "kind": "texture",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 358,
+      "sha256": "4efc135959823766d6ad11492228a544d1dd96af9bab941dd82fbcbac8fff119",
+      "era": "Windows 95/98/2000",
+      "variant": "classic",
+      "image": {
+        "viewBox": "0 0 8 8",
+        "width": 8,
+        "height": 8
+      }
+    },
+    {
+      "path": "textures/windows-7-aero.svg",
+      "kind": "texture",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 570,
+      "sha256": "a108497e6bef284031d366d5a28068124233c2be6d0070d5af5fc00d886ebe89",
+      "era": "Windows 7",
+      "variant": "windows-7-aero",
+      "image": {
+        "viewBox": "0 0 96 96",
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "path": "textures/windows-7-basic.svg",
+      "kind": "texture",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 345,
+      "sha256": "e9ef2ae33f55e58573fe5c74e7b6bf31771cbc6237cf79bbe016bcedcecde611",
+      "era": "Windows 7",
+      "variant": "windows-7-basic",
+      "image": {
+        "viewBox": "0 0 8 8",
+        "width": 8,
+        "height": 8
+      }
+    },
+    {
+      "path": "textures/xp-luna-blue.svg",
+      "kind": "texture",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 482,
+      "sha256": "312ab168d7eaec5ce3f6a245458ea389a18e4d689d4fe1d00b9e5cf18ee4c6a5",
+      "era": "Windows XP",
+      "variant": "xp-luna-blue",
+      "image": {
+        "viewBox": "0 0 64 64",
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "path": "textures/xp-luna-olive.svg",
+      "kind": "texture",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 482,
+      "sha256": "87f58980286cda70cb5258bceef2f5c6778e194400aa53bb165c198c1d6e769e",
+      "era": "Windows XP",
+      "variant": "xp-luna-olive",
+      "image": {
+        "viewBox": "0 0 64 64",
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "path": "textures/xp-luna-silver.svg",
+      "kind": "texture",
+      "mediaType": "image/svg+xml",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original programmatically authored vector artwork; no source artwork used.",
+      "license": "CC0-1.0",
+      "bytes": 482,
+      "sha256": "520ec2426b3a7a5d8630d58cada10fa69e0e0a3eb3ee7e7351efd16c43d9a011",
+      "era": "Windows XP",
+      "variant": "xp-luna-silver",
+      "image": {
+        "viewBox": "0 0 64 64",
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "path": "tokens/classic.json",
+      "kind": "theme-pack",
+      "mediaType": "application/json",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 4695,
+      "sha256": "527e47c219dc16ff09abd54bf6d0d8bb5e292044b7389f3fe55cf1bdb5a0af10",
+      "era": "Windows 95/98/2000",
+      "variant": "default"
+    },
+    {
+      "path": "tokens/schema.json",
+      "kind": "schema",
+      "mediaType": "application/json",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 9106,
+      "sha256": "7ad25ed2b1ffa4f4e9b3453ff55d406869cc7873a8f111b6cb499dee3bcb2294"
+    },
+    {
+      "path": "tokens/themes.css",
+      "kind": "stylesheet",
+      "mediaType": "text/css",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 23153,
+      "sha256": "b3f62a3e70bd5e7dcd357df99eca7f9b990aefd1899a7cf2aa1afb76603eba06"
+    },
+    {
+      "path": "tokens/windows-7-aero.json",
+      "kind": "theme-pack",
+      "mediaType": "application/json",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 5259,
+      "sha256": "a0ca98eb4d5f86766667ae87e9cb7060cf266c5ec5d15a2ef52b70edce816052",
+      "era": "Windows 7",
+      "variant": "aero"
+    },
+    {
+      "path": "tokens/windows-7-basic.json",
+      "kind": "theme-pack",
+      "mediaType": "application/json",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 5055,
+      "sha256": "4694f5dbfad087f9fb970559031f9d2c4c4670e98da829cdc652cba89670fe40",
+      "era": "Windows 7",
+      "variant": "basic"
+    },
+    {
+      "path": "tokens/xp-luna-blue.json",
+      "kind": "theme-pack",
+      "mediaType": "application/json",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 5119,
+      "sha256": "f99b0e04b2839fd7921e4b5eb846f599119fdd6775f815f8c2f3455bdc5d648a",
+      "era": "Windows XP",
+      "variant": "blue"
+    },
+    {
+      "path": "tokens/xp-luna-olive.json",
+      "kind": "theme-pack",
+      "mediaType": "application/json",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 5125,
+      "sha256": "604ae37fd94f4354f3bf444fb9de8351d7b7fe66df052ea55899f30884aebcc1",
+      "era": "Windows XP",
+      "variant": "olive"
+    },
+    {
+      "path": "tokens/xp-luna-silver.json",
+      "kind": "theme-pack",
+      "mediaType": "application/json",
+      "source": "tools/build_assets.py",
+      "author": "retro-windows-ui contributors",
+      "provenance": "Original deterministic semantic theme and presentation data.",
+      "license": "CC0-1.0",
+      "bytes": 5131,
+      "sha256": "cb0a2f07422c2906fc6af047f73d7aa569e28b404c6827f7cc8cde0efbe8eb12",
+      "era": "Windows XP",
+      "variant": "silver"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+<defs><linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0058e6"/><stop offset=".55" stop-color="#3a93ff"/><stop offset="1" stop-color="#0058e6"/></linearGradient></defs>
+<rect width="64" height="64" fill="url(#sheen)"/><path d="M0 20Q32 2 64 20V0H0Z" fill="#fff" opacity=".08"/><path d="M0 48Q32 30 64 48" fill="none" stroke="#fff" opacity=".06"/>
+</svg>

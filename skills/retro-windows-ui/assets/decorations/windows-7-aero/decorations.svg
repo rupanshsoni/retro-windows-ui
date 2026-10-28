@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<symbol id="minimize" viewBox="0 0 16 16">
+<g fill="none" stroke="#173c52" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 11h8"/></g><g fill="none" stroke="#ffffff" stroke-width="2.8" stroke-opacity=".55" stroke-linecap="round"><path d="M4 11h8"/></g>
+</symbol>
+<symbol id="maximize" viewBox="0 0 16 16">
+<g fill="none" stroke="#173c52" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="4" y="4" width="9" height="8"/></g><g fill="none" stroke="#ffffff" stroke-width="2.8" stroke-opacity=".55" stroke-linecap="round"><rect x="4" y="4" width="9" height="8"/></g>
+</symbol>
+<symbol id="restore" viewBox="0 0 16 16">
+<g fill="none" stroke="#173c52" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 4h7v6M4 7h7v7H4Z"/></g><g fill="none" stroke="#ffffff" stroke-width="2.8" stroke-opacity=".55" stroke-linecap="round"><path d="M6 4h7v6M4 7h7v7H4Z"/></g>
+</symbol>
+<symbol id="close" viewBox="0 0 16 16">
+<g fill="none" stroke="#173c52" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="m5 5 7 7m0-7-7 7"/></g><g fill="none" stroke="#ffffff" stroke-width="2.8" stroke-opacity=".55" stroke-linecap="round"><path d="m5 5 7 7m0-7-7 7"/></g>
+</symbol>
+</svg>

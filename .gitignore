@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.qoder/
+dist/
+artifacts/
+.DS_Store
+
+# Separate portfolio project in this workspace
+/rupansh-portfolio/

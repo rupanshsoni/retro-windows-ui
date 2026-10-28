@@ -1,0 +1,400 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schema.json",
+  "title": "retro-windows-ui semantic theme pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "identity",
+    "typography",
+    "colors",
+    "metrics",
+    "spacing",
+    "radius",
+    "gradients",
+    "shadows",
+    "motion",
+    "contrastPairs"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "family",
+        "era",
+        "variant",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "family": {
+          "enum": [
+            "classic",
+            "xp-luna",
+            "windows-7"
+          ]
+        },
+        "era": {
+          "type": "string"
+        },
+        "variant": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fontFamily",
+        "fontFamilyMono",
+        "roles"
+      ],
+      "properties": {
+        "fontFamily": {
+          "type": "string"
+        },
+        "fontFamilyMono": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "object",
+          "required": [
+            "body",
+            "windowTitle",
+            "menu",
+            "small",
+            "code"
+          ],
+          "properties": {
+            "body": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "size",
+                "weight",
+                "lineHeight"
+              ],
+              "properties": {
+                "size": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 900
+                },
+                "lineHeight": {
+                  "type": "string"
+                }
+              }
+            },
+            "windowTitle": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "size",
+                "weight",
+                "lineHeight"
+              ],
+              "properties": {
+                "size": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 900
+                },
+                "lineHeight": {
+                  "type": "string"
+                }
+              }
+            },
+            "menu": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "size",
+                "weight",
+                "lineHeight"
+              ],
+              "properties": {
+                "size": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 900
+                },
+                "lineHeight": {
+                  "type": "string"
+                }
+              }
+            },
+            "small": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "size",
+                "weight",
+                "lineHeight"
+              ],
+              "properties": {
+                "size": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 900
+                },
+                "lineHeight": {
+                  "type": "string"
+                }
+              }
+            },
+            "code": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "size",
+                "weight",
+                "lineHeight"
+              ],
+              "properties": {
+                "size": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 900
+                },
+                "lineHeight": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "colors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "surface",
+        "text",
+        "border",
+        "bevel",
+        "selection",
+        "focus",
+        "titlebar",
+        "taskbar",
+        "status"
+      ],
+      "properties": {
+        "surface": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "text": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "border": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "bevel": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "selection": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "focus": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "titlebar": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "taskbar": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "status": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "spacing": {
+      "type": "object",
+      "required": [
+        "unit",
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "radius": {
+      "type": "object",
+      "required": [
+        "none",
+        "control",
+        "window",
+        "menu",
+        "selection"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "gradients": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "shadows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "motion": {
+      "type": "object",
+      "required": [
+        "durationFast",
+        "durationNormal",
+        "durationSlow",
+        "easing"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "contrastPairs": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "foreground",
+          "background",
+          "minimumRatio"
+        ],
+        "properties": {
+          "foreground": {
+            "type": "string",
+            "minLength": 1
+          },
+          "background": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minimumRatio": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 21
+          }
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "minProperties": 1,
+      "description": "Optional paths are relative to the theme pack file.",
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "string",
+            "pattern": "^(?!https?:)"
+          },
+          {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "pattern": "^(?!https?:)"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

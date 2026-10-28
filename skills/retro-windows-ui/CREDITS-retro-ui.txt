@@ -1,0 +1,7 @@
+
+Scope note:
+This CC0 dedication applies only to the original files shipped in this skill
+directory. Third-party Microsoft-derived wallpaper, logo, boot, icon, font, or
+sound files that a user sources from a reference recreation are not covered and
+remain the property of their owners. When a user asks for a faithful Microsoft
+recreation, record those source URLs and rights in the project CREDITS.

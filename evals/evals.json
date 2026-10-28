@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "skill": "retro-windows-ui",
+  "positive": [
+    {
+      "id": "xp-transfer-dialog",
+      "prompt": "Build an XP Luna blue file-transfer dialog with progress, cancel, and error states.",
+      "expect": [
+        "Selects XP Luna blue without Aero or Classic era mixing",
+        "Includes keyboard focus, default/cancel behavior, progress text, and non-color error feedback",
+        "Uses local assets and renders or explicitly reports unavailable visual verification"
+      ]
+    },
+    {
+      "id": "windows-7-retrofit",
+      "prompt": "Turn this settings panel into a Windows 7 Aero interface without changing its behavior.",
+      "expect": [
+        "Preserves existing behavior and selects Windows 7 Aero guidance",
+        "Uses Segoe UI local fallbacks, period spacing, restrained glass, and an opaque fallback",
+        "Checks reduced transparency, keyboard operation, and text scaling"
+      ]
+    },
+    {
+      "id": "classic-accessible-desktop",
+      "prompt": "Create an accessible Windows Classic-inspired desktop using only bundled assets.",
+      "expect": [
+        "Uses Classic hard bevels and square geometry rather than Luna or Aero",
+        "Maintains visible focus, contrast, keyboard access, and non-color status cues",
+        "Uses only manifest-cleared local assets"
+      ]
+    },
+    {
+      "id": "opt-in-sfx",
+      "prompt": "Add opt-in retro UI sounds and a persistent mute control.",
+      "expect": [
+        "No audio plays before explicit user activation",
+        "Mute and volume persist and storage/audio failure remains usable",
+        "Every sound has equivalent visible feedback"
+      ]
+    },
+    {
+      "id": "era-audit",
+      "prompt": "Review this screenshot for accidental mixing of XP and Aero styling.",
+      "expect": [
+        "Identifies era-specific typography, geometry, material, and state differences",
+        "Recommends one coherent target era rather than a blended theme",
+        "Distinguishes observed defects from uncertain historical claims"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "fluent",
+      "prompt": "Build a Windows 11 Fluent settings page.",
+      "reason": "Modern Fluent Design is outside the retro Windows scope."
+    },
+    {
+      "id": "powershell",
+      "prompt": "Fix this PowerShell execution-policy error.",
+      "reason": "Windows troubleshooting without interface design is outside scope."
+    },
+    {
+      "id": "synthwave",
+      "prompt": "Create a generic synthwave music-player card.",
+      "reason": "Generic nostalgia without retro Windows design is outside scope."
+    },
+    {
+      "id": "modernize",
+      "prompt": "Modernize this old interface into a contemporary SaaS dashboard.",
+      "reason": "The requested direction is away from retro Windows styling."
+    }
+  ],
+  "comparison": {
+    "runs_per_prompt": 3,
+    "fresh_context": true,
+    "compare_without_skill": true,
+    "score": [
+      "era_fidelity",
+      "state_completeness",
+      "keyboard_accessibility",
+      "scaling_and_reduced_modes",
+      "offline_asset_provenance",
+      "rendered_verification"
+    ]
+  }
+}
