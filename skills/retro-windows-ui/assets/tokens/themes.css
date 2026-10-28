@@ -102,6 +102,7 @@
   --rw-motion-slow: 0ms;
   --rw-motion-easing: linear;
   --rw-texture: url("../textures/classic.svg");
+  --rw-wallpaper: url("../wallpapers/classic.svg");
   --rw-backdrop-filter: none;
   --rw-control-style: bevel;
 }
@@ -207,6 +208,7 @@
   --rw-motion-slow: 220ms;
   --rw-motion-easing: ease-out;
   --rw-texture: url("../textures/xp-luna-blue.svg");
+  --rw-wallpaper: url("../wallpapers/xp-luna-blue.svg");
   --rw-backdrop-filter: none;
   --rw-control-style: rounded;
 }
@@ -312,6 +314,7 @@
   --rw-motion-slow: 220ms;
   --rw-motion-easing: ease-out;
   --rw-texture: url("../textures/xp-luna-olive.svg");
+  --rw-wallpaper: url("../wallpapers/xp-luna-olive.svg");
   --rw-backdrop-filter: none;
   --rw-control-style: rounded;
 }
@@ -417,6 +420,7 @@
   --rw-motion-slow: 220ms;
   --rw-motion-easing: ease-out;
   --rw-texture: url("../textures/xp-luna-silver.svg");
+  --rw-wallpaper: url("../wallpapers/xp-luna-silver.svg");
   --rw-backdrop-filter: none;
   --rw-control-style: rounded;
 }
@@ -522,6 +526,7 @@
   --rw-motion-slow: 280ms;
   --rw-motion-easing: cubic-bezier(.2,.7,.2,1);
   --rw-texture: url("../textures/windows-7-aero.svg");
+  --rw-wallpaper: url("../wallpapers/windows-7-aero.svg");
   --rw-backdrop-filter: blur(12px) saturate(125%);
   --rw-control-style: glass;
 }
@@ -627,6 +632,7 @@
   --rw-motion-slow: 280ms;
   --rw-motion-easing: cubic-bezier(.2,.7,.2,1);
   --rw-texture: url("../textures/windows-7-basic.svg");
+  --rw-wallpaper: url("../wallpapers/windows-7-basic.svg");
   --rw-backdrop-filter: none;
   --rw-control-style: rounded;
 }

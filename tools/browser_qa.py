@@ -360,6 +360,71 @@ def run_starter_checks(browser, base_url):
     context.close()
 
 
+def run_boot_checks(browser, base_url):
+    failures = []
+    context = browser.new_context(viewport={"width": 1280, "height": 900})
+    page = context.new_page()
+    attach_audits(page, failures)
+    page.goto(f"{base_url}/boot/index.html", wait_until="networkidle")
+    stage = page.locator("#boot-stage")
+    expect(stage).to_have_attribute("data-view", "xp")
+    page.wait_for_timeout(1700)
+    expect(stage).to_have_attribute("data-phase", "welcome")
+    page.locator("#boot-skip").click()
+    expect(page.locator("#boot-end")).to_be_visible()
+    page.locator("#boot-again").click()
+    expect(page.locator("#boot-end")).to_be_hidden()
+    select_theme(page, "classic")
+    expect(stage).to_have_attribute("data-view", "classic")
+    assert_no_horizontal_overflow(page, "boot classic")
+    select_theme(page, "windows-7-aero")
+    expect(stage).to_have_attribute("data-view", "win7")
+    page.screenshot(path=ARTIFACTS / "boot-win7.png", full_page=True)
+    page.locator("#boot-skip").click()
+    if failures:
+        raise AssertionError("\n".join(sorted(set(failures))))
+    context.close()
+
+
+def run_desktop_checks(browser, base_url):
+    failures = []
+    context = browser.new_context(viewport={"width": 1440, "height": 960})
+    page = context.new_page()
+    attach_audits(page, failures)
+    install_audio_probe(page)
+    page.goto(f"{base_url}/desktop/index.html", wait_until="networkidle")
+    expect(page.locator("#computer-title")).to_have_text("My Computer")
+    expect(page.locator("[data-window='computer']")).to_be_visible()
+    page.locator("[data-open-window='notepad']").first.click()
+    notepad = page.locator("[data-window='notepad']")
+    expect(notepad).to_be_visible()
+    notepad.locator("[data-window-action='minimize']").click()
+    expect(notepad).to_be_hidden()
+    page.locator("[data-task-window='notepad']").click()
+    expect(notepad).to_be_visible()
+    select_theme(page, "classic")
+    assert_no_horizontal_overflow(page, "default desktop mockup")
+    page.screenshot(path=ARTIFACTS / "desktop-mockup.png", full_page=True)
+    if page.evaluate("window.__retroQaAudioPlays") != 0:
+        raise AssertionError("Desktop mockup played audio before opt-in")
+    if failures:
+        raise AssertionError("\n".join(sorted(set(failures))))
+    context.close()
+
+    mobile = browser.new_context(viewport={"width": 390, "height": 844})
+    mobile_page = mobile.new_page()
+    attach_audits(mobile_page, failures)
+    mobile_page.goto(f"{base_url}/desktop/index.html", wait_until="networkidle")
+    mobile_page.locator("[data-open-window='notepad']").first.click()
+    expect(mobile_page.locator("[data-window='notepad']")).to_be_visible()
+    expect(mobile_page.locator("[data-window='computer']")).to_be_hidden()
+    assert_no_horizontal_overflow(mobile_page, "default desktop mobile")
+    mobile_page.screenshot(path=ARTIFACTS / "desktop-mockup-mobile.png", full_page=True)
+    mobile.close()
+    if failures:
+        raise AssertionError("\n".join(sorted(set(failures))))
+
+
 def run_file_protocol_check(browser, assets):
     failures = []
     context = browser.new_context(viewport={"width": 1100, "height": 800})
@@ -393,6 +458,8 @@ def main():
             try:
                 run_gallery_checks(browser, base_url)
                 run_starter_checks(browser, base_url)
+                run_boot_checks(browser, base_url)
+                run_desktop_checks(browser, base_url)
                 run_file_protocol_check(browser, assets)
             finally:
                 browser.close()
@@ -400,8 +467,8 @@ def main():
         "audioPersistence": "passed",
         "audioPlaysBeforeOptIn": 0,
         "fileProtocol": "passed",
-        "interactionPages": ["starter", "gallery"],
-        "screenshots": 11,
+        "interactionPages": ["starter", "gallery", "boot", "desktop"],
+        "screenshots": 16,
         "themes": len(THEMES),
     }
     report_path = ARTIFACTS / "browser-report.json"

@@ -23,6 +23,12 @@
 .gallery-taskbar-demo .start-menu { position: absolute; }
 .audio-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 7px; }
 .audio-matrix .button { width: 100%; }
+.icon-strip { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 12px; padding: 8px; background: var(--rw-surface-window-solid); border: 1px solid var(--rw-border-highlight); }
+.icon-strip figure { width: 72px; margin: 0; text-align: center; }
+.icon-strip img { display: block; margin: 0 auto 3px; }
+.icon-strip figcaption { color: var(--rw-text-secondary); font-size: 10px; }
+.asset-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.asset-links .button { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
 .gallery-footer { width: min(980px, calc(100vw - 36px)); margin: 0 auto; }
 .gallery-footer .statusbar { border: 1px solid var(--rw-border-dark); }
 @media (max-width: 650px) {

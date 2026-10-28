@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Original Windows 7 Aero inspired aurora wallpaper">
+<defs>
+<radialGradient id="deep" cx="52%" cy="34%" r="82%"><stop stop-color="#1d638f"/><stop offset=".48" stop-color="#0c3151"/><stop offset="1" stop-color="#041321"/></radialGradient>
+<linearGradient id="aurora" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#78e3ff" stop-opacity=".55"/><stop offset=".45" stop-color="#2f9fd8" stop-opacity=".16"/><stop offset="1" stop-color="#b7ffd9" stop-opacity="0"/></linearGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#68c7ee" stop-opacity=".38"/><stop offset="1" stop-color="#03101b" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#deep)"/>
+<path d="M-80 610C280 380 520 470 760 420s500-190 920-40v460H-80Z" fill="url(#aurora)"/>
+<path d="M-50 760c340-170 620-150 900-40s620 80 800-30v310H-50Z" fill="url(#floor)"/>
+<path d="M0 690h1600" stroke="#bdeeff" stroke-opacity=".16"/>
+<g fill="#d8f7ff" opacity=".55"><circle cx="220" cy="180" r="2"/><circle cx="480" cy="110" r="1.5"/><circle cx="1180" cy="140" r="2"/><circle cx="1390" cy="260" r="1.5"/><circle cx="960" cy="80" r="1"/></g>
+</svg>

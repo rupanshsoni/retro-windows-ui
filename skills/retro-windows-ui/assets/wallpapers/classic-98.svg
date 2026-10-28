@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Original cloudy Classic desktop wallpaper">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b66b8"/><stop offset=".55" stop-color="#6ba9df"/><stop offset="1" stop-color="#c5e3f7"/></linearGradient>
+<linearGradient id="field" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4c9b46"/><stop offset="1" stop-color="#1f6529"/></linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#sky)"/>
+<g fill="#ffffff" opacity=".8"><ellipse cx="260" cy="220" rx="170" ry="52"/><ellipse cx="360" cy="190" rx="110" ry="42"/><ellipse cx="1150" cy="300" rx="210" ry="58"/><ellipse cx="1290" cy="268" rx="120" ry="38"/></g>
+<path d="M0 700q320-130 640-20t960-10v330H0Z" fill="url(#field)"/>
+<path d="M0 790q400-90 780 10t820-20v220H0Z" fill="#1c5925" opacity=".65"/>
+</svg>

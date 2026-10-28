@@ -189,6 +189,10 @@
     "icons": "../icons/classic/icons.svg",
     "decorations": "../decorations/classic/decorations.svg",
     "texture": "../textures/classic.svg",
+    "wallpaper": "../wallpapers/classic.svg",
+    "startMark": "../brand/classic-start.svg",
+    "brandMark": "../brand/classic-mark.svg",
+    "bootExample": "../boot/index.html",
     "audio": {
       "activate": "../audio/activate.wav",
       "notify": "../audio/notify.wav",

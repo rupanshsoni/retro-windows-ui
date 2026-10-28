@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" role="img" aria-label="xp-luna-silver start mark">
+<defs>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8585a5"/><stop offset=".55" stop-color="#30334b"/><stop offset="1" stop-color="#051018"/></linearGradient>
+<linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fdfdff"/><stop offset="1" stop-color="#fff2b0"/></linearGradient>
+</defs>
+<rect x="2" y="2" width="60" height="60" rx="12" fill="url(#brand)" stroke="#30334b" stroke-width="2"/>
+<path d="M8 8h48v20c-12 8-36 8-48 0Z" fill="#ffffff" opacity=".14"/>
+<rect x="11" y="13" width="42" height="38" rx="4" fill="url(#screen)" stroke="#30334b" stroke-width="2"/>
+<path d="M11 22h42" stroke="#30334b" stroke-width="2"/>
+<rect x="15" y="15.5" width="5" height="4" fill="#e6ca68" stroke="#30334b" stroke-width="1"/>
+<rect x="22" y="15.5" width="5" height="4" fill="#8585a5" stroke="#30334b" stroke-width="1"/>
+<path d="M17 30h22M17 36h16" stroke="#8585a5" stroke-width="2.5" stroke-linecap="square"/>
+<path d="m28 39 9 4-3.5 1.2L35 47l-2 .8-1.5-2.8L29 46Z" fill="#e6ca68" stroke="#30334b" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>

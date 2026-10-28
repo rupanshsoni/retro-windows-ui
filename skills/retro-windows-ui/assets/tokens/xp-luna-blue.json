@@ -189,6 +189,10 @@
     "icons": "../icons/xp-luna-blue/icons.svg",
     "decorations": "../decorations/xp-luna-blue/decorations.svg",
     "texture": "../textures/xp-luna-blue.svg",
+    "wallpaper": "../wallpapers/xp-luna-blue.svg",
+    "startMark": "../brand/xp-luna-blue-start.svg",
+    "brandMark": "../brand/xp-luna-blue-mark.svg",
+    "bootExample": "../boot/index.html",
     "audio": {
       "activate": "../audio/activate.wav",
       "notify": "../audio/notify.wav",

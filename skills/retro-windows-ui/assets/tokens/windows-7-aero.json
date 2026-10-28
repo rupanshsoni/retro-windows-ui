@@ -189,6 +189,10 @@
     "icons": "../icons/windows-7-aero/icons.svg",
     "decorations": "../decorations/windows-7-aero/decorations.svg",
     "texture": "../textures/windows-7-aero.svg",
+    "wallpaper": "../wallpapers/windows-7-aero.svg",
+    "startMark": "../brand/windows-7-aero-start.svg",
+    "brandMark": "../brand/windows-7-aero-mark.svg",
+    "bootExample": "../boot/index.html",
     "audio": {
       "activate": "../audio/activate.wav",
       "notify": "../audio/notify.wav",

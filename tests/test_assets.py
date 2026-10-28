@@ -45,7 +45,7 @@ class AssetTests(unittest.TestCase):
                 self.assertTrue((ASSETS / record["path"]).is_file())
 
     def test_runtime_examples_have_no_remote_resources(self):
-        for folder in (ASSETS / "starter", ASSETS / "gallery"):
+        for folder in (ASSETS / "starter", ASSETS / "gallery", ASSETS / "boot", ASSETS / "desktop"):
             for path in folder.iterdir():
                 if path.suffix not in {".html", ".css", ".js"}:
                     continue

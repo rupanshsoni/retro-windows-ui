@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-theme="xp-luna-blue">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retro Windows UI — Startup Screens</title>
+  <link rel="stylesheet" href="../tokens/themes.css">
+  <link rel="stylesheet" href="../starter/starter.css">
+  <link rel="stylesheet" href="boot.css">
+  <script src="boot.js" defer></script>
+</head>
+<body>
+  <main class="boot-demo">
+    <header class="demo-bar">
+      <div class="demo-title">
+        <img id="bar-mark" src="../brand/xp-luna-blue-start.svg" alt="" width="24" height="24">
+        <div>
+          <h1>Startup screens</h1>
+          <p>Original, skippable boot examples for every bundled theme.</p>
+        </div>
+      </div>
+      <div class="demo-controls">
+        <div class="field">
+          <label for="boot-theme">Theme</label>
+          <select id="boot-theme">
+            <option value="classic">Windows Classic</option>
+            <option value="xp-luna-blue" selected>XP Luna Blue</option>
+            <option value="xp-luna-olive">XP Luna Olive</option>
+            <option value="xp-luna-silver">XP Luna Silver</option>
+            <option value="windows-7-aero">Windows 7 Aero</option>
+            <option value="windows-7-basic">Windows 7 Basic</option>
+          </select>
+        </div>
+        <button class="button" id="boot-replay" type="button">Replay</button>
+        <button class="button" id="boot-skip" type="button">Skip intro</button>
+      </div>
+    </header>
+
+    <section class="boot-stage" id="boot-stage" aria-label="Startup sequence preview" aria-describedby="boot-status">
+      <p class="visually-hidden" id="boot-status" role="status" aria-live="polite">Loading the startup sequence.</p>
+
+      <div class="boot-view boot-view--classic" data-boot-view="classic">
+        <div class="classic-brand">
+          <img id="classic-mark" src="../brand/classic-mark.svg" alt="" width="72" height="72">
+          <p class="wordmark">retro<span>windows</span>ui</p>
+          <p class="classic-caption">an offline interface study</p>
+        </div>
+        <div class="classic-footer">
+          <p class="classic-status">Starting desktop<span class="dots" aria-hidden="true">...</span></p>
+          <div class="classic-loader" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="classic-copyright">Independent fan study · no Microsoft binaries included</p>
+        </div>
+      </div>
+
+      <div class="boot-view boot-view--xp" data-boot-view="xp">
+        <div class="xp-loading">
+          <div class="xp-lockup">
+            <img id="xp-mark" src="../brand/xp-luna-blue-mark.svg" alt="" width="76" height="76">
+            <p class="wordmark xp-wordmark">retro<span>windows</span>ui</p>
+          </div>
+          <div class="xp-loader" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="xp-loading-caption">Opening your desktop</p>
+          <div class="xp-loading-foot"><span>Independent interface study</span><span>retro-windows-ui</span></div>
+        </div>
+        <div class="xp-welcome" aria-hidden="true">
+          <div class="xp-welcome-top">
+            <img id="welcome-mark" src="../brand/xp-luna-blue-mark.svg" alt="" width="28" height="28">
+            <span class="wordmark">retro<span>windows</span>ui</span>
+          </div>
+          <div class="xp-welcome-main"><span>Welcome</span></div>
+          <div class="xp-rule" aria-hidden="true"></div>
+          <div class="xp-welcome-foot"></div>
+        </div>
+      </div>
+
+      <div class="boot-view boot-view--seven" data-boot-view="win7">
+        <div class="seven-center">
+          <div class="seven-orb"><img id="seven-mark" src="../brand/windows-7-aero-mark.svg" alt="" width="44" height="44"></div>
+          <p class="seven-title">Starting your desktop</p>
+          <p class="seven-caption">retro-windows-ui · original startup study</p>
+        </div>
+        <div class="seven-loader" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="seven-foot">Independent fan study · no Microsoft binaries included</p>
+      </div>
+
+      <div class="boot-end" id="boot-end" hidden>
+        <p class="boot-end-title">Startup sequence complete</p>
+        <p class="boot-end-text">Every stage is skippable and reduced-motion safe. This page demonstrates grammar, timing, and exit behavior — it does not claim to boot an operating system.</p>
+        <div class="boot-end-actions">
+          <button class="button default" id="boot-again" type="button">Play again</button>
+          <a class="button" href="../desktop/index.html">Open default desktop</a>
+          <a class="button" href="../gallery/index.html">Open component gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="boot-links" aria-label="Example navigation">
+      <a href="../starter/index.html">Starter</a>
+      <a href="../desktop/index.html">Default desktop</a>
+      <a href="../gallery/index.html">Gallery</a>
+      <a href="../contact-sheet.html">Asset sheet</a>
+    </nav>
+  </main>
+</body>
+</html>

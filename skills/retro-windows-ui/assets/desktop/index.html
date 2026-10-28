@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" data-theme="xp-luna-blue">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retro Windows UI — Default Desktop Mockup</title>
+  <link rel="stylesheet" href="../tokens/themes.css">
+  <link rel="stylesheet" href="../starter/starter.css">
+  <link rel="stylesheet" href="desktop.css">
+  <script src="../starter/starter.js" defer></script>
+  <script src="desktop.js" defer></script>
+</head>
+<body>
+  <main class="desktop mockup-desktop" data-retro-app>
+    <nav class="desktop-icons" aria-label="Desktop icons">
+      <button class="desk-icon" type="button" data-open-window="computer">
+        <img data-icon="computer" src="../icons/xp-luna-blue/computer.svg" alt="" width="32" height="32">
+        <span>My Computer</span>
+      </button>
+      <button class="desk-icon" type="button" data-open-window="documents">
+        <img data-icon="documents" src="../icons/xp-luna-blue/documents.svg" alt="" width="32" height="32">
+        <span>My Documents</span>
+      </button>
+      <button class="desk-icon" type="button" data-open-window="recycle">
+        <img data-icon="recycle-bin" src="../icons/xp-luna-blue/recycle-bin.svg" alt="" width="32" height="32">
+        <span>Recycle Bin</span>
+      </button>
+      <button class="desk-icon" type="button" data-open-window="notepad">
+        <img data-icon="document" src="../icons/xp-luna-blue/document.svg" alt="" width="32" height="32">
+        <span>Read Me.txt</span>
+      </button>
+    </nav>
+
+    <aside class="preview-tools mockup-tools" aria-label="Preview settings">
+      <div class="field">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select" data-theme-select>
+          <option value="classic">Windows Classic</option>
+          <option value="xp-luna-blue" selected>XP Luna Blue</option>
+          <option value="xp-luna-olive">XP Luna Olive</option>
+          <option value="xp-luna-silver">XP Luna Silver</option>
+          <option value="windows-7-aero">Windows 7 Aero</option>
+          <option value="windows-7-basic">Windows 7 Basic</option>
+        </select>
+      </div>
+      <label class="check"><input type="checkbox" data-reduced-transparency-control> Opaque</label>
+      <label class="check"><input type="checkbox" data-reduced-motion-control> Less motion</label>
+      <label class="check"><input type="checkbox" data-sound-enable> Sound</label>
+      <button class="button compact" id="mute-sound" type="button" data-mute aria-pressed="false">Mute</button>
+      <div class="field">
+        <label for="sound-volume">Volume</label>
+        <input id="sound-volume" type="range" min="0" max="100" value="35" data-volume>
+      </div>
+    </aside>
+
+    <section class="window mockup-window computer-window active" data-window="computer" aria-labelledby="computer-title">
+      <header class="titlebar">
+        <img data-icon="computer" src="../icons/xp-luna-blue/computer.svg" alt="" width="16" height="16">
+        <h2 class="window-title" id="computer-title">My Computer</h2>
+        <div class="titlebar-actions">
+          <button class="caption-button" type="button" data-window-action="minimize" aria-label="Minimize My Computer">_</button>
+          <button class="caption-button" type="button" data-window-action="maximize" aria-label="Maximize My Computer">□</button>
+          <button class="caption-button" type="button" data-window-action="close" aria-label="Close My Computer">×</button>
+        </div>
+      </header>
+      <nav class="menubar" aria-label="My Computer menu">
+        <div>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="computer-file-menu">File</button>
+          <div class="menu-popup" id="computer-file-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" type="button" data-window-action="close">Close</button>
+          </div>
+        </div>
+        <div>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="computer-view-menu">View</button>
+          <div class="menu-popup" id="computer-view-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="Large icons selected">Large Icons</button>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="Details selected">Details</button>
+          </div>
+        </div>
+        <div>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="computer-help-menu">Help</button>
+          <div class="menu-popup" id="computer-help-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="This is an independent mockup, not a real operating system.">About My Computer</button>
+          </div>
+        </div>
+      </nav>
+      <div class="toolbar mockup-toolbar" aria-label="Navigation">
+        <button class="button compact" type="button" data-feedback="Back unavailable in this mockup">&larr; Back</button>
+        <button class="button compact" type="button" data-feedback="Forward unavailable in this mockup">Forward &rarr;</button>
+        <button class="button compact" type="button" data-feedback="Up unavailable in this mockup">Up</button>
+        <span class="toolbar-separator" aria-hidden="true"></span>
+        <button class="button compact" type="button" data-feedback="Search is a visual placeholder"><img data-icon="search" src="../icons/xp-luna-blue/search.svg" alt="" width="16" height="16"> Search</button>
+        <button class="button compact" type="button" data-feedback="Folder pane toggled">Folders</button>
+      </div>
+      <div class="window-body computer-body">
+        <div class="address-bar"><span>Address</span><div class="address-input">My Computer</div></div>
+        <div class="computer-layout">
+          <div class="computer-main">
+            <fieldset class="computer-group">
+              <legend>Files Stored on This Computer</legend>
+              <div class="icon-grid">
+                <button class="file-icon" type="button" data-open-window="documents"><img data-icon="documents" src="../icons/xp-luna-blue/documents.svg" alt="" width="32" height="32"><span>Shared Documents</span></button>
+                <button class="file-icon" type="button" data-open-window="documents"><img data-icon="folder" src="../icons/xp-luna-blue/folder.svg" alt="" width="32" height="32"><span>My Documents</span></button>
+              </div>
+            </fieldset>
+            <fieldset class="computer-group">
+              <legend>Hard Disk Drives</legend>
+              <div class="icon-grid">
+                <button class="file-icon" type="button" data-feedback="Local Disk (C:) selected"><img data-icon="computer" src="../icons/xp-luna-blue/computer.svg" alt="" width="32" height="32"><span>Local Disk (C:)</span></button>
+              </div>
+            </fieldset>
+            <fieldset class="computer-group">
+              <legend>Devices with Removable Storage</legend>
+              <div class="icon-grid">
+                <button class="file-icon" type="button" data-feedback="DVD Drive (D:) selected"><img data-icon="music" src="../icons/xp-luna-blue/music.svg" alt="" width="32" height="32"><span>DVD Drive (D:)</span></button>
+              </div>
+            </fieldset>
+          </div>
+          <aside class="computer-side" aria-label="System tasks">
+            <fieldset>
+              <legend>System Tasks</legend>
+              <ul class="link-list">
+                <li><button type="button" data-feedback="System information is a visual placeholder">View system information</button></li>
+                <li><button type="button" data-feedback="Add or remove programs is a visual placeholder">Add or remove programs</button></li>
+                <li><button type="button" data-feedback="Change a setting is a visual placeholder">Change a setting</button></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Details</legend>
+              <p class="side-note">Local Disk (C:)<br>File system: NTFS<br>Free space: 32.4 GB</p>
+            </fieldset>
+          </aside>
+        </div>
+      </div>
+      <footer class="statusbar"><span id="status-message">4 objects</span><span>My Computer</span></footer>
+    </section>
+
+    <section class="window mockup-window documents-window" data-window="documents" aria-labelledby="documents-title" hidden>
+      <header class="titlebar">
+        <img data-icon="documents" src="../icons/xp-luna-blue/documents.svg" alt="" width="16" height="16">
+        <h2 class="window-title" id="documents-title">My Documents</h2>
+        <div class="titlebar-actions">
+          <button class="caption-button" type="button" data-window-action="minimize" aria-label="Minimize My Documents">_</button>
+          <button class="caption-button" type="button" data-window-action="close" aria-label="Close My Documents">×</button>
+        </div>
+      </header>
+      <div class="window-body">
+        <div class="address-bar"><span>Address</span><div class="address-input">My Documents</div></div>
+        <ul class="folder-list">
+          <li><button class="folder-row" type="button" data-open-window="notepad"><img data-icon="document" src="../icons/xp-luna-blue/document.svg" alt="" width="24" height="24"><span><strong>Read Me.txt</strong><small>Text document · 2 KB</small></span></button></li>
+          <li><button class="folder-row" type="button" data-feedback="Example folder selected"><img data-icon="folder" src="../icons/xp-luna-blue/folder.svg" alt="" width="24" height="24"><span><strong>My Pictures</strong><small>File folder</small></span></button></li>
+          <li><button class="folder-row" type="button" data-feedback="Example folder selected"><img data-icon="folder" src="../icons/xp-luna-blue/folder.svg" alt="" width="24" height="24"><span><strong>My Music</strong><small>File folder</small></span></button></li>
+          <li><button class="folder-row" type="button" data-feedback="Example folder selected"><img data-icon="folder" src="../icons/xp-luna-blue/folder.svg" alt="" width="24" height="24"><span><strong>Projects</strong><small>File folder · 6 items</small></span></button></li>
+        </ul>
+      </div>
+      <footer class="statusbar"><span>4 objects</span><span>My Documents</span></footer>
+    </section>
+
+    <section class="window mockup-window notepad-window" data-window="notepad" aria-labelledby="notepad-title" hidden>
+      <header class="titlebar">
+        <img data-icon="document" src="../icons/xp-luna-blue/document.svg" alt="" width="16" height="16">
+        <h2 class="window-title" id="notepad-title">Read Me.txt - Notepad</h2>
+        <div class="titlebar-actions">
+          <button class="caption-button" type="button" data-window-action="minimize" aria-label="Minimize Read Me">_</button>
+          <button class="caption-button" type="button" data-window-action="maximize" aria-label="Maximize Read Me">□</button>
+          <button class="caption-button" type="button" data-window-action="close" aria-label="Close Read Me">×</button>
+        </div>
+      </header>
+      <nav class="menubar" aria-label="Notepad menu">
+        <div>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="notepad-file-menu">File</button>
+          <div class="menu-popup" id="notepad-file-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="New document is a visual placeholder">New</button>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="Saved locally in this mockup">Save</button>
+            <div class="menu-separator" role="separator"></div>
+            <button class="menu-item" role="menuitem" type="button" data-window-action="close">Exit</button>
+          </div>
+        </div>
+        <div>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="notepad-edit-menu">Edit</button>
+          <div class="menu-popup" id="notepad-edit-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="Undo is a visual placeholder">Undo</button>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="Select All is a visual placeholder">Select All</button>
+          </div>
+        </div>
+        <div>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="notepad-help-menu">Help</button>
+          <div class="menu-popup" id="notepad-help-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" type="button" data-feedback="Original offline mockup; no Microsoft media bundled.">About Notepad</button>
+          </div>
+        </div>
+      </nav>
+      <div class="window-body notepad-body">
+        <textarea class="notepad-text" spellcheck="false" aria-label="Read Me text">retro-windows-ui — default desktop mockup
+
+This is an original, offline interface study. It shows the
+same shell grammar as the rest of the skill:
+
+  • desktop icons and wallpaper
+  • modeless windows with minimize, maximize, and close
+  • Start menu, quick launch, taskbar, and tray
+  • six theme families with semantic tokens
+
+Everything here is original artwork. It is not a Microsoft
+product, and no Microsoft icons, wallpapers, fonts, or sounds
+are bundled. For an exact fan recreation, read
+references/asset-sourcing.md and import the user's own
+reference assets locally.
+
+Try the theme selector in the upper-right preview panel.
+The shell, icons, wallpaper, and Start mark all follow it.</textarea>
+      </div>
+      <footer class="statusbar"><span>Local only</span><span>Ln 1, Col 1</span></footer>
+    </section>
+
+    <section class="window mockup-window recycle-window" data-window="recycle" aria-labelledby="recycle-title" hidden>
+      <header class="titlebar">
+        <img data-icon="recycle-bin" src="../icons/xp-luna-blue/recycle-bin.svg" alt="" width="16" height="16">
+        <h2 class="window-title" id="recycle-title">Recycle Bin</h2>
+        <div class="titlebar-actions">
+          <button class="caption-button" type="button" data-window-action="minimize" aria-label="Minimize Recycle Bin">_</button>
+          <button class="caption-button" type="button" data-window-action="close" aria-label="Close Recycle Bin">×</button>
+        </div>
+      </header>
+      <div class="window-body recycle-body">
+        <img data-icon="recycle-bin-full" src="../icons/xp-luna-blue/recycle-bin-full.svg" alt="" width="48" height="48">
+        <p><strong>Recycle Bin is empty</strong></p>
+        <p>Deleted files would appear here. This placeholder is part of the shell mockup.</p>
+      </div>
+      <footer class="statusbar"><span>0 objects</span><span>Recycle Bin</span></footer>
+    </section>
+
+    <div class="taskbar" role="toolbar" aria-label="Taskbar">
+      <button class="start-button" id="start-button" type="button" aria-expanded="false" aria-controls="start-menu">
+        <img data-brand-start src="../brand/xp-luna-blue-start.svg" alt="" width="20" height="20">
+        <span>Start</span>
+      </button>
+      <div class="quick-launch" role="group" aria-label="Quick launch">
+        <button class="quick-btn" type="button" data-open-window="computer" aria-label="Open My Computer" title="My Computer"><img data-icon="computer" src="../icons/xp-luna-blue/computer.svg" alt="" width="16" height="16"></button>
+        <button class="quick-btn" type="button" data-open-window="notepad" aria-label="Open Read Me" title="Read Me"><img data-icon="document" src="../icons/xp-luna-blue/document.svg" alt="" width="16" height="16"></button>
+      </div>
+      <div class="taskbar-buttons">
+        <button class="taskbar-button" type="button" data-task-window="computer" aria-pressed="true">My Computer</button>
+        <button class="taskbar-button" type="button" data-task-window="documents" aria-pressed="false" hidden>My Documents</button>
+        <button class="taskbar-button" type="button" data-task-window="notepad" aria-pressed="false" hidden>Read Me.txt</button>
+        <button class="taskbar-button" type="button" data-task-window="recycle" aria-pressed="false" hidden>Recycle Bin</button>
+      </div>
+      <span class="tray" id="tray-status">Sound off</span>
+    </div>
+
+    <div class="menu-popup start-menu" id="start-menu" role="menu" hidden>
+      <button class="menu-item" role="menuitem" type="button" data-open-window="computer"><img data-icon="computer" src="../icons/xp-luna-blue/computer.svg" alt="" width="20" height="20">My Computer</button>
+      <button class="menu-item" role="menuitem" type="button" data-open-window="documents"><img data-icon="documents" src="../icons/xp-luna-blue/documents.svg" alt="" width="20" height="20">My Documents</button>
+      <button class="menu-item" role="menuitem" type="button" data-open-window="notepad"><img data-icon="document" src="../icons/xp-luna-blue/document.svg" alt="" width="20" height="20">Read Me</button>
+      <div class="menu-separator" role="separator"></div>
+      <button class="menu-item" role="menuitem" type="button" data-open-window="recycle"><img data-icon="recycle-bin" src="../icons/xp-luna-blue/recycle-bin.svg" alt="" width="20" height="20">Recycle Bin</button>
+      <div class="menu-separator" role="separator"></div>
+      <a class="menu-item" role="menuitem" href="../starter/index.html"><img data-icon="settings" src="../icons/xp-luna-blue/settings.svg" alt="" width="20" height="20">Component starter</a>
+      <a class="menu-item" role="menuitem" href="../gallery/index.html"><img data-icon="programs" src="../icons/xp-luna-blue/programs.svg" alt="" width="20" height="20">Component gallery</a>
+      <a class="menu-item" role="menuitem" href="../boot/index.html"><img data-icon="power" src="../icons/xp-luna-blue/power.svg" alt="" width="20" height="20">Startup screens</a>
+    </div>
+  </main>
+</body>
+</html>

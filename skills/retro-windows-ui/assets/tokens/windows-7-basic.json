@@ -189,6 +189,10 @@
     "icons": "../icons/windows-7-basic/icons.svg",
     "decorations": "../decorations/windows-7-basic/decorations.svg",
     "texture": "../textures/windows-7-basic.svg",
+    "wallpaper": "../wallpapers/windows-7-basic.svg",
+    "startMark": "../brand/windows-7-basic-start.svg",
+    "brandMark": "../brand/windows-7-basic-mark.svg",
+    "bootExample": "../boot/index.html",
     "audio": {
       "activate": "../audio/activate.wav",
       "notify": "../audio/notify.wav",

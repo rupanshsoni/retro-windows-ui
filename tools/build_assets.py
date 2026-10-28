@@ -26,8 +26,16 @@ THEME_IDS = (
     "windows-7-aero",
     "windows-7-basic",
 )
-ICON_NAMES = ("folder", "document", "search", "settings", "info", "warning")
+ICON_NAMES = (
+    "computer", "documents", "folder", "folder-open", "document", "recycle-bin",
+    "recycle-bin-full", "network", "internet", "email", "search", "settings",
+    "control-panel", "help", "run", "programs", "briefcase", "pictures", "music",
+    "volume", "mute", "power", "logoff", "user", "task-manager", "ai", "code",
+    "design", "info", "warning",
+)
+SHELL_ICON_NAMES = ICON_NAMES
 DECORATION_NAMES = ("minimize", "maximize", "restore", "close")
+WALLPAPER_NAMES = ("classic", "classic-95", "classic-98", "classic-2000", "xp-luna-blue", "xp-luna-olive", "xp-luna-silver", "windows-7-aero", "windows-7-basic")
 AUTHOR = "retro-windows-ui contributors"
 PROVENANCE_SVG = "Original programmatically authored vector artwork; no source artwork used."
 PROVENANCE_AUDIO = "Original synthesized sine-wave composition; no sampled or prerecorded audio used."
@@ -73,6 +81,10 @@ def theme_pack(theme_id: str) -> dict:
             "icons": f"../icons/{theme_id}/icons.svg",
             "decorations": f"../decorations/{theme_id}/decorations.svg",
             "texture": f"../textures/{theme_id}.svg",
+            "wallpaper": f"../wallpapers/{theme_id}.svg",
+            "startMark": f"../brand/{theme_id}-start.svg",
+            "brandMark": f"../brand/{theme_id}-mark.svg",
+            "bootExample": "../boot/index.html",
             "audio": {
                 "activate": "../audio/activate.wav",
                 "notify": "../audio/notify.wav",
@@ -309,6 +321,7 @@ def themes_css(packs: dict[str, dict]) -> bytes:
             f"  --rw-motion-slow: {p['motion']['durationSlow']};",
             f"  --rw-motion-easing: {p['motion']['easing']};",
             f'  --rw-texture: url("../textures/{theme_id}.svg");',
+            f'  --rw-wallpaper: url("../wallpapers/{theme_id}.svg");',
             "  --rw-backdrop-filter: blur(12px) saturate(125%);" if theme_id == "windows-7-aero" else "  --rw-backdrop-filter: none;",
             "  --rw-control-style: glass;" if theme_id == "windows-7-aero" else ("  --rw-control-style: rounded;" if theme_id.startswith("xp-") or theme_id == "windows-7-basic" else "  --rw-control-style: bevel;"),
             "}",
@@ -355,40 +368,111 @@ def icon_palette(theme_id: str) -> tuple[str, str, str, str, str]:
     return "#e6b94f", "#f9dfa0", "#ffffff", "#4b86a9", "#233e50"
 
 
+def icon_extra(theme_id: str) -> dict[str, str]:
+    if theme_id == "classic":
+        return {"screen": "#000080", "green": "#008000", "red": "#800000", "metal": "#c0c0c0", "line": "#ffffff"}
+    if theme_id == "xp-luna-blue":
+        return {"screen": "#2b72d6", "green": "#3f9e45", "red": "#c74631", "metal": "#d8d2c4", "line": "#ffffff"}
+    if theme_id == "xp-luna-olive":
+        return {"screen": "#6b913d", "green": "#3f8a35", "red": "#a8462f", "metal": "#ded8c8", "line": "#ffffff"}
+    if theme_id == "xp-luna-silver":
+        return {"screen": "#8585a5", "green": "#4b8a55", "red": "#a34a42", "metal": "#dedee8", "line": "#ffffff"}
+    if theme_id == "windows-7-aero":
+        return {"screen": "#3f9fd0", "green": "#4e9d59", "red": "#c05a4b", "metal": "#dce7ec", "line": "#ffffff"}
+    return {"screen": "#4b86a9", "green": "#4e8e58", "red": "#a95146", "metal": "#d7dadd", "line": "#ffffff"}
+
+
 def icon_defs(theme_id: str) -> str:
     gold, pale, paper, accent, ink = icon_palette(theme_id)
     prefix = theme_id
+    extra = icon_extra(theme_id)
     soft = ".18" if theme_id == "windows-7-aero" else ".10"
     return f'''<defs>
   <linearGradient id="{prefix}-gold" x1="0" y1="0" x2="0" y2="1"><stop stop-color="{pale}"/><stop offset="1" stop-color="{gold}"/></linearGradient>
   <linearGradient id="{prefix}-paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="{paper}"/></linearGradient>
+  <linearGradient id="{prefix}-accent" x1="0" y1="0" x2="0" y2="1"><stop stop-color="{extra['line']}" stop-opacity=".55"/><stop offset=".45" stop-color="{accent}"/><stop offset="1" stop-color="{ink}"/></linearGradient>
+  <linearGradient id="{prefix}-screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{extra['screen']}"/><stop offset="1" stop-color="{ink}"/></linearGradient>
   <filter id="{prefix}-soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1" stdDeviation=".6" flood-color="{ink}" flood-opacity="{soft}"/></filter>
 </defs>'''
 
 
 def icon_shapes(theme_id: str, name: str) -> str:
     gold, pale, paper, accent, ink = icon_palette(theme_id)
+    extra = icon_extra(theme_id)
     rounded = theme_id != "classic"
     rx = "2" if rounded else "0"
     stroke = "1.25" if theme_id == "classic" else "1"
     filt = "" if theme_id == "classic" else f' filter="url(#{theme_id}-soft)"'
+    common = f'stroke="{ink}" stroke-width="{stroke}" stroke-linejoin="round"'
+    if name == "computer":
+        return f'''<g{filt} {common}>
+<rect x="2" y="3" width="20" height="14" rx="{rx}" fill="{extra['metal']}"/>
+<rect x="4" y="5" width="16" height="9" fill="url(#{theme_id}-screen)"/>
+<path d="M6 7h6M6 9.5h4" stroke="{extra['line']}" opacity=".75"/>
+<path d="M9 17v3M15 17v3M6.5 20h11" fill="none"/>
+<circle cx="18.2" cy="6.3" r="1" fill="{extra['green']}" stroke-width=".7"/>
+</g>'''
+    if name == "documents":
+        return f'''<g{filt} {common}>
+<path d="M3 5h7l2 2h8v13H3Z" fill="url(#{theme_id}-gold)"/>
+<path d="M7 3h9l3 3v12H7Z" fill="url(#{theme_id}-paper)"/>
+<path d="M16 3v4h3M10 9h6M10 12h6M10 15h4" fill="none" stroke="{accent}"/>
+</g>'''
     if name == "folder":
         return f'''<g{filt} stroke="{ink}" stroke-width="{stroke}" stroke-linejoin="round">
-<path d="M2 6h7l2-3h8a2 2 0 0 1 2 2v4H2Z" fill="url(#{theme_id}-gold)" rx="{rx}"/>
+<path d="M2 6h7l2-3h8a2 2 0 0 1 2 2v4H2Z" fill="url(#{theme_id}-gold)"/>
 <path d="M2 8h20l-2 12H4Z" fill="url(#{theme_id}-gold)"/>
 <path d="M5 10h14" stroke="{pale}"/>
 </g>'''
+    if name == "folder-open":
+        return f'''<g{filt} {common}>
+<path d="M2 5h7l2-2h8a1 1 0 0 1 1 1v4H6L2 19Z" fill="url(#{theme_id}-gold)"/>
+<path d="M6 9h16l-3 11H3Z" fill="url(#{theme_id}-paper)"/>
+<path d="M8 11h12" stroke="{extra['line']}"/>
+</g>'''
     if name == "document":
         return f'''<g{filt} stroke="{ink}" stroke-width="{stroke}" stroke-linejoin="round">
-<path d="M5 2h10l4 4v16H5Z" fill="url(#{theme_id}-paper)" rx="{rx}"/>
+<path d="M5 2h10l4 4v16H5Z" fill="url(#{theme_id}-paper)"/>
 <path d="M15 2v5h4" fill="{pale}"/>
 <path d="M8 11h8M8 14h8M8 17h6" stroke="{accent}"/>
+</g>'''
+    if name in ("recycle-bin", "recycle-bin-full"):
+        papers = ""
+        if name == "recycle-bin-full":
+            papers = f'''<path d="M7 9 9 5l2 3 2-4 2 4 2-3 1 5Z" fill="{paper}" stroke="{ink}" stroke-width=".8"/>'''
+        return f'''<g{filt} {common}>
+{papers}
+<path d="M5 7h14l-1.4 14H6.4Z" fill="{extra['metal']}"/>
+<path d="M4 7h16M9 7V4h6v3" fill="none"/>
+<path d="M8.6 11h3.2l-1.6 2.2M15.4 14.5h-3.2l1.6-2.2M12 18v-2.8" fill="none" stroke="{extra['green']}" stroke-width="1.6"/>
+<path d="M7 19h10" stroke="{ink}" opacity=".35"/>
+</g>'''
+    if name == "network":
+        return f'''<g{filt} {common}>
+<rect x="1.5" y="4" width="9" height="7" rx="{rx}" fill="{extra['metal']}"/>
+<rect x="3" y="5.5" width="6" height="4" fill="url(#{theme_id}-screen)"/>
+<rect x="13.5" y="13" width="9" height="7" rx="{rx}" fill="{extra['metal']}"/>
+<rect x="15" y="14.5" width="6" height="4" fill="url(#{theme_id}-screen)"/>
+<path d="M6 11v4h12v-2M6 15v3M18 15v-2" fill="none" stroke="{ink}" opacity=".7"/>
+<circle cx="6" cy="15" r="1.3" fill="{gold}"/>
+<circle cx="18" cy="13" r="1.3" fill="{extra['green']}"/>
+</g>'''
+    if name == "internet":
+        return f'''<g{filt} stroke="{ink}" stroke-width="{stroke}">
+<circle cx="12" cy="12" r="9" fill="url(#{theme_id}-screen)"/>
+<path d="M6 7c2 1 4 0 5 1s-1 3-3 3-3-1-4-2ZM13 14c2-1 4 1 5 2s0 3-2 3-3-1-3-2Z" fill="{extra['green']}" stroke-width=".7"/>
+<path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="{extra['line']}" opacity=".8" stroke-width=".8"/>
+</g>'''
+    if name == "email":
+        return f'''<g{filt} {common}>
+<rect x="2" y="5" width="20" height="14" rx="{rx}" fill="url(#{theme_id}-paper)"/>
+<path d="m3 6 9 7 9-7M3 18l7-6M21 18l-7-6" fill="none" stroke="{accent}"/>
 </g>'''
     if name == "search":
         return f'''<g{filt} fill="none" stroke="{ink}" stroke-width="2" stroke-linecap="round">
 <circle cx="10" cy="10" r="6" fill="{paper}" stroke="{accent}"/>
 <path d="m14.5 14.5 6 6" stroke="{ink}" stroke-width="3"/>
-<path d="M7 7a4 4 0 0 1 4-2" stroke="#fff" stroke-width="1"/>
+<path d="M7 7a4 4 0 0 1 4-2" stroke="{extra['line']}" stroke-width="1"/>
 </g>'''
     if name == "settings":
         teeth = " ".join(f'<path d="M12 2v3" transform="rotate({a} 12 12)"/>' for a in range(0, 360, 45))
@@ -397,11 +481,110 @@ def icon_shapes(theme_id: str, name: str) -> str:
 <circle cx="12" cy="12" r="7" fill="{accent}"/>
 <circle cx="12" cy="12" r="3" fill="{paper}" stroke-width="1"/>
 </g>'''
+    if name == "control-panel":
+        return f'''<g{filt} {common}>
+<rect x="3" y="4" width="18" height="16" rx="{rx}" fill="url(#{theme_id}-paper)"/>
+<path d="M3 8h18" stroke="{accent}" stroke-width="2"/>
+<path d="M7 12h10M7 16h10" fill="none" stroke="{ink}" opacity=".55"/>
+<circle cx="10" cy="12" r="2" fill="url(#{theme_id}-gold)"/>
+<circle cx="15" cy="16" r="2" fill="{extra['green']}"/>
+</g>'''
+    if name == "help":
+        return f'''<g{filt} stroke="{ink}" stroke-width="{stroke}">
+<circle cx="12" cy="12" r="9" fill="url(#{theme_id}-accent)"/>
+<path d="M9 9a3 3 0 1 1 4.8 2.5c-.8.6-1.8 1.1-1.8 2.5" fill="none" stroke="{extra['line']}" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="18" r="1.2" fill="{extra['line']}" stroke="none"/>
+</g>'''
+    if name == "run":
+        return f'''<g{filt} {common}>
+<rect x="2" y="4" width="20" height="16" rx="{rx}" fill="url(#{theme_id}-paper)"/>
+<path d="M2 4h20v4H2Z" fill="url(#{theme_id}-accent)"/>
+<path d="m6 11 3 2.5L6 16M11 16h5" fill="none" stroke="{extra['green']}" stroke-width="1.8" stroke-linecap="round"/>
+</g>'''
+    if name == "programs":
+        return f'''<g{filt} {common}>
+<rect x="2" y="4" width="20" height="16" rx="{rx}" fill="url(#{theme_id}-paper)"/>
+<path d="M2 4h20v4H2Z" fill="url(#{theme_id}-accent)"/>
+<rect x="5" y="10" width="6" height="4" fill="{extra['green']}"/>
+<rect x="13" y="10" width="6" height="4" fill="url(#{theme_id}-gold)"/>
+<rect x="5" y="16" width="6" height="2.5" fill="{extra['red']}"/>
+<rect x="13" y="16" width="6" height="2.5" fill="{accent}"/>
+</g>'''
+    if name == "briefcase":
+        return f'''<g{filt} {common}>
+<path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" fill="none"/>
+<rect x="2" y="7" width="20" height="13" rx="{rx}" fill="url(#{theme_id}-accent)"/>
+<path d="M2 12h20M10 12v2h4v-2" fill="none" stroke="{extra['line']}" opacity=".8"/>
+</g>'''
+    if name == "pictures":
+        return f'''<g{filt} {common}>
+<rect x="2" y="4" width="20" height="16" rx="{rx}" fill="url(#{theme_id}-paper)"/>
+<rect x="4" y="6" width="16" height="12" fill="{extra['screen']}"/>
+<circle cx="8" cy="9.5" r="1.8" fill="{gold}" stroke="none"/>
+<path d="m4 16 5-5 3 3 3-3 5 5v2H4Z" fill="{extra['green']}" stroke-width=".8"/>
+</g>'''
+    if name == "music":
+        return f'''<g{filt} {common}>
+<circle cx="12" cy="12" r="9" fill="url(#{theme_id}-accent)"/>
+<circle cx="12" cy="12" r="2.2" fill="{paper}" stroke-width=".8"/>
+<path d="M14 6v7.5M14 6l4 1" fill="none" stroke="{extra['line']}" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="12.5" cy="14.5" r="1.8" fill="{extra['line']}" stroke="none"/>
+</g>'''
+    if name in ("volume", "mute"):
+        wave = f'''<path d="M15 9c1.5 1.5 1.5 4.5 0 6M17.5 7c2.5 2.5 2.5 7.5 0 10" fill="none" stroke="{accent}" stroke-width="1.5" stroke-linecap="round"/>''' if name == "volume" else f'''<path d="m15 9 5 6m0-6-5 6" fill="none" stroke="{extra['red']}" stroke-width="1.8" stroke-linecap="round"/>'''
+        return f'''<g{filt} {common}>
+<path d="M3 9h4l5-4v14l-5-4H3Z" fill="url(#{theme_id}-paper)"/>
+{wave}
+</g>'''
+    if name == "power":
+        return f'''<g{filt} fill="none" stroke="{ink}" stroke-width="1.6">
+<circle cx="12" cy="13" r="7" fill="{paper}" stroke="{extra['green']}" stroke-width="2"/>
+<path d="M12 5v7" stroke="{extra['green']}" stroke-width="2.2" stroke-linecap="round"/>
+</g>'''
+    if name == "logoff":
+        return f'''<g{filt} {common}>
+<path d="M4 3h9v18H4Z" fill="url(#{theme_id}-paper)"/>
+<path d="M13 12h7M17 9l3 3-3 3" fill="none" stroke="{extra['green']}" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="10" cy="12" r="1" fill="{ink}" stroke="none"/>
+</g>'''
+    if name == "user":
+        return f'''<g{filt} {common}>
+<circle cx="12" cy="8" r="4" fill="{extra['metal']}"/>
+<path d="M4 21c.6-4.2 3.6-6 8-6s7.4 1.8 8 6Z" fill="url(#{theme_id}-accent)"/>
+</g>'''
+    if name == "task-manager":
+        return f'''<g{filt} {common}>
+<rect x="2" y="4" width="20" height="16" rx="{rx}" fill="url(#{theme_id}-paper)"/>
+<path d="M2 4h20v4H2Z" fill="url(#{theme_id}-accent)"/>
+<path d="M6 16V12M10 16V9M14 16v-3M18 16V7" stroke="{extra['green']}" stroke-width="2" stroke-linecap="square"/>
+<path d="M5 16h14" stroke="{ink}" opacity=".4"/>
+</g>'''
+    if name == "ai":
+        return f'''<g{filt} {common}>
+<rect x="6" y="6" width="12" height="12" rx="{rx}" fill="url(#{theme_id}-accent)"/>
+<rect x="9" y="9" width="6" height="6" fill="url(#{theme_id}-paper)"/>
+<path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" fill="none" stroke="{ink}" stroke-width="1.4"/>
+<circle cx="12" cy="12" r="1.2" fill="{extra['green']}" stroke="none"/>
+</g>'''
+    if name == "code":
+        return f'''<g{filt} {common}>
+<rect x="2" y="4" width="20" height="16" rx="{rx}" fill="url(#{theme_id}-paper)"/>
+<path d="M2 4h20v4H2Z" fill="url(#{theme_id}-accent)"/>
+<path d="M9 10 6 13l3 3M15 10l3 3-3 3M13 9l-2 8" fill="none" stroke="{extra['green']}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>'''
+    if name == "design":
+        return f'''<g{filt} {common}>
+<rect x="3" y="3" width="18" height="18" rx="{rx}" fill="url(#{theme_id}-paper)"/>
+<path d="m7 17 7-9 3 3-7 9H7Z" fill="url(#{theme_id}-gold)"/>
+<path d="m14 8 3 3" stroke="{ink}" stroke-width="1"/>
+<circle cx="17" cy="7" r="2" fill="{accent}"/>
+<circle cx="7" cy="7" r="1.4" fill="{extra['green']}" stroke="none"/>
+</g>'''
     if name == "info":
         return f'''<g{filt} stroke="{ink}" stroke-width="{stroke}">
 <circle cx="12" cy="12" r="9" fill="{accent}"/>
-<circle cx="12" cy="7" r="1.3" fill="#fff" stroke="none"/>
-<path d="M12 11v6" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="12" cy="7" r="1.3" fill="{extra['line']}" stroke="none"/>
+<path d="M12 11v6" stroke="{extra['line']}" stroke-width="2.2" stroke-linecap="round"/>
 </g>'''
     if name == "warning":
         return f'''<g{filt} stroke="{ink}" stroke-width="{stroke}" stroke-linejoin="round">
@@ -450,6 +633,122 @@ def make_decoration_assets(outputs: dict[str, bytes]) -> None:
             outputs[f"decorations/{theme_id}/{name}.svg"] = svg_document(decoration_shapes(theme_id, name), 16, 16, f"{theme_id} {name}")
             symbols.append(f'<symbol id="{name}" viewBox="0 0 16 16">\n{decoration_shapes(theme_id, name)}\n</symbol>')
         outputs[f"decorations/{theme_id}/decorations.svg"] = ('<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">\n' + "\n".join(symbols) + "\n</svg>\n").encode("utf-8")
+
+
+def wallpaper_svg(theme_id: str) -> bytes:
+    if theme_id in ("classic", "classic-95"):
+        content = '''<defs>
+<pattern id="dither" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#008080"/><path d="M0 0h1v1H0Zm2 2h1v1H2Z" fill="#ffffff" opacity=".035"/></pattern>
+<radialGradient id="soft" cx="50%" cy="38%" r="65%"><stop stop-color="#0f9b9b"/><stop offset="1" stop-color="#006e6e"/></radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#soft)"/><rect width="1600" height="1000" fill="url(#dither)"/>
+<path d="M0 780q400-70 800 0t800 0v220H0Z" fill="#006666" opacity=".25"/>'''
+        return svg_document(content, 1600, 1000, "Original Classic teal desktop wallpaper")
+    if theme_id == "classic-98":
+        content = '''<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b66b8"/><stop offset=".55" stop-color="#6ba9df"/><stop offset="1" stop-color="#c5e3f7"/></linearGradient>
+<linearGradient id="field" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4c9b46"/><stop offset="1" stop-color="#1f6529"/></linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#sky)"/>
+<g fill="#ffffff" opacity=".8"><ellipse cx="260" cy="220" rx="170" ry="52"/><ellipse cx="360" cy="190" rx="110" ry="42"/><ellipse cx="1150" cy="300" rx="210" ry="58"/><ellipse cx="1290" cy="268" rx="120" ry="38"/></g>
+<path d="M0 700q320-130 640-20t960-10v330H0Z" fill="url(#field)"/>
+<path d="M0 790q400-90 780 10t820-20v220H0Z" fill="#1c5925" opacity=".65"/>'''
+        return svg_document(content, 1600, 1000, "Original cloudy Classic desktop wallpaper")
+    if theme_id == "classic-2000":
+        content = '''<defs>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2f66"/><stop offset=".5" stop-color="#23629e"/><stop offset="1" stop-color="#7fb6cf"/></linearGradient>
+<linearGradient id="wave" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#blue)"/>
+<path d="M-80 780c260-240 480-260 820-60s600 170 940-80v360H-80Z" fill="#0c3c75" opacity=".55"/>
+<path d="M-50 690c300-210 520-200 840 20s620 160 860-60" fill="none" stroke="url(#wave)" stroke-width="120"/>
+<path d="M0 120h1600M0 220h1600" stroke="#ffffff" stroke-opacity=".04" stroke-width="2"/>'''
+        return svg_document(content, 1600, 1000, "Original Windows 2000 inspired blue wallpaper")
+    if theme_id.startswith("xp-"):
+        pack = theme_pack(theme_id)
+        task = pack["colors"]["taskbar"]["background"]
+        task_end = pack["colors"]["taskbar"]["backgroundEnd"]
+        if theme_id == "xp-luna-blue":
+            sky_top, sky_bottom = "#2d7bd8", "#c9e9ff"
+            hill_far, hill_near = "#6cae3b", "#2f6b1f"
+            sun = "#fff4c2"
+        elif theme_id == "xp-luna-olive":
+            sky_top, sky_bottom = "#e2a949", "#f7e4b1"
+            hill_far, hill_near = "#84984a", "#41541f"
+            sun = "#fff1b8"
+        else:
+            sky_top, sky_bottom = "#9cabb9", "#e8eef3"
+            hill_far, hill_near = "#8f9ca7", "#4f5e69"
+            sun = "#ffffff"
+        content = f'''<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="{sky_top}"/><stop offset=".62" stop-color="{sky_bottom}"/></linearGradient>
+<linearGradient id="hillFar" x1="0" y1="0" x2="0" y2="1"><stop stop-color="{hill_far}"/><stop offset="1" stop-color="{hill_near}"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop stop-color="{sun}" stop-opacity=".4"/><stop offset="1" stop-color="{sun}" stop-opacity="0"/></linearGradient>
+<radialGradient id="sun" cx="76%" cy="18%" r="30%"><stop stop-color="{sun}" stop-opacity=".9"/><stop offset="1" stop-color="{sun}" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#sky)"/><rect width="1600" height="1000" fill="url(#sun)"/>
+<g fill="#ffffff" opacity=".55"><ellipse cx="310" cy="220" rx="180" ry="48"/><ellipse cx="420" cy="192" rx="130" ry="38"/><ellipse cx="1060" cy="160" rx="160" ry="40"/></g>
+<path d="M0 610c260-90 430-50 620-120 230-85 430-40 610 10 150 42 270 20 370-12v512H0Z" fill="url(#hillFar)"/>
+<path d="M0 760c240-110 480-80 720-10s560 72 880-34v284H0Z" fill="{hill_near}" opacity=".75"/>
+<path d="M0 680h1600v320H0Z" fill="url(#haze)"/>
+<rect y="986" width="1600" height="14" fill="{task}"/><rect y="982" width="1600" height="4" fill="{task_end}" opacity=".7"/>'''
+        return svg_document(content, 1600, 1000, f"Original {pack['identity']['name']} inspired wallpaper")
+    if theme_id == "windows-7-aero":
+        content = '''<defs>
+<radialGradient id="deep" cx="52%" cy="34%" r="82%"><stop stop-color="#1d638f"/><stop offset=".48" stop-color="#0c3151"/><stop offset="1" stop-color="#041321"/></radialGradient>
+<linearGradient id="aurora" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#78e3ff" stop-opacity=".55"/><stop offset=".45" stop-color="#2f9fd8" stop-opacity=".16"/><stop offset="1" stop-color="#b7ffd9" stop-opacity="0"/></linearGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#68c7ee" stop-opacity=".38"/><stop offset="1" stop-color="#03101b" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#deep)"/>
+<path d="M-80 610C280 380 520 470 760 420s500-190 920-40v460H-80Z" fill="url(#aurora)"/>
+<path d="M-50 760c340-170 620-150 900-40s620 80 800-30v310H-50Z" fill="url(#floor)"/>
+<path d="M0 690h1600" stroke="#bdeeff" stroke-opacity=".16"/>
+<g fill="#d8f7ff" opacity=".55"><circle cx="220" cy="180" r="2"/><circle cx="480" cy="110" r="1.5"/><circle cx="1180" cy="140" r="2"/><circle cx="1390" cy="260" r="1.5"/><circle cx="960" cy="80" r="1"/></g>'''
+        return svg_document(content, 1600, 1000, "Original Windows 7 Aero inspired aurora wallpaper")
+    content = '''<defs>
+<linearGradient id="deep" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17415f"/><stop offset=".55" stop-color="#214f70"/><stop offset="1" stop-color="#0a2233"/></linearGradient>
+<linearGradient id="stripe" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffffff" stop-opacity=".1"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#deep)"/>
+<path d="M-100 900 700 300h260L160 980Z" fill="url(#stripe)"/>
+<path d="M200 1000 1080 220h120L420 1000Z" fill="#ffffff" opacity=".03"/>
+<rect y="900" width="1600" height="100" fill="#071c2b" opacity=".4"/>'''
+    return svg_document(content, 1600, 1000, "Original Windows 7 Basic inspired wallpaper")
+
+
+def make_wallpaper_assets(outputs: dict[str, bytes]) -> None:
+    for name in WALLPAPER_NAMES:
+        outputs[f"wallpapers/{name}.svg"] = wallpaper_svg(name)
+
+
+def brand_mark(theme_id: str, size: int) -> bytes:
+    gold, pale, paper, accent, ink = icon_palette(theme_id)
+    classic = theme_id == "classic"
+    radius = "0" if classic else "12"
+    inner_radius = "0" if classic else "4"
+    border = "3" if classic else "2"
+    gloss = "" if classic else '<path d="M8 8h48v20c-12 8-36 8-48 0Z" fill="#ffffff" opacity=".14"/>'
+    content = f'''<defs>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{accent}"/><stop offset=".55" stop-color="{ink}"/><stop offset="1" stop-color="#051018"/></linearGradient>
+<linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{paper}"/><stop offset="1" stop-color="{pale}"/></linearGradient>
+</defs>
+<rect x="2" y="2" width="60" height="60" rx="{radius}" fill="url(#brand)" stroke="{ink}" stroke-width="{border}"/>
+{gloss}
+<rect x="11" y="13" width="42" height="38" rx="{inner_radius}" fill="url(#screen)" stroke="{ink}" stroke-width="{border}"/>
+<path d="M11 22h42" stroke="{ink}" stroke-width="{border}"/>
+<rect x="15" y="15.5" width="5" height="4" fill="{gold}" stroke="{ink}" stroke-width="1"/>
+<rect x="22" y="15.5" width="5" height="4" fill="{accent}" stroke="{ink}" stroke-width="1"/>
+<path d="M17 30h22M17 36h16" stroke="{accent}" stroke-width="2.5" stroke-linecap="square"/>
+<path d="m28 39 9 4-3.5 1.2L35 47l-2 .8-1.5-2.8L29 46Z" fill="{gold}" stroke="{ink}" stroke-width="1.5" stroke-linejoin="round"/>'''
+    if size == 64:
+        return svg_document(content, 64, 64, f"{theme_id} original window mark")
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{size}" height="{size}" viewBox="0 0 64 64" role="img" aria-label="{theme_id} start mark">\n{content}\n</svg>\n').encode("utf-8")
+
+
+def make_brand_assets(outputs: dict[str, bytes]) -> None:
+    for theme_id in THEME_IDS:
+        outputs[f"brand/{theme_id}-mark.svg"] = brand_mark(theme_id, 64)
+        outputs[f"brand/{theme_id}-start.svg"] = brand_mark(theme_id, 24)
 
 
 def make_texture_assets(outputs: dict[str, bytes]) -> None:
@@ -537,7 +836,8 @@ def contact_sheet() -> bytes:
         sections.append(f'''<section class="theme-card" data-theme="{theme_id}">
 <h2>{pack['identity']['name']}</h2><p>{pack['identity']['era']} / {pack['identity']['variant']}</p>
 <div class="icons">{icons}</div><div class="decorations" aria-label="Window decoration glyphs">{decorations}</div>
-<div class="texture" style="background-image:url('textures/{theme_id}.svg')"><span>Original subtle texture</span></div>
+<div class="brands"><img src="brand/{theme_id}-mark.svg" width="48" height="48" alt="{theme_id} brand mark"><img src="brand/{theme_id}-start.svg" width="24" height="24" alt="{theme_id} start mark"><span>Brand + start marks</span></div>
+<div class="previews"><div class="texture" style="background-image:url('textures/{theme_id}.svg')"><span>Original subtle texture</span></div><div class="wallpaper" style="background-image:url('wallpapers/{theme_id}.svg')"><span>Original desktop wallpaper</span></div></div>
 </section>''')
     audio = "".join(f'''<tr><th scope="row">{name}.wav</th><td><audio controls preload="none" src="audio/{name}.wav">Audio cue: {name}.wav</audio></td><td>Original deterministic PCM16 synthesis; CC0-1.0; no Windows audio sampled or imitated.</td></tr>''' for name in ("activate", "notify", "complete", "error"))
     html = f'''<!doctype html>
@@ -545,9 +845,9 @@ def contact_sheet() -> bytes:
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Retro Windows UI — Asset Contact Sheet</title>
 <link rel="stylesheet" href="tokens/themes.css">
 <style>
-*{{box-sizing:border-box}}body{{margin:0;padding:24px;background:#e7e7e7;color:#171717;font:14px/1.45 Tahoma,'Segoe UI',sans-serif}}header,section,table{{max-width:1180px;margin:auto}}h1{{margin:0 0 6px}}a{{color:#0645ad}}.theme-card{{padding:18px;margin:20px 0;background:var(--rw-surface-window);border:2px solid var(--rw-border-default);border-radius:var(--rw-radius-window);box-shadow:var(--rw-shadow-window);backdrop-filter:var(--rw-backdrop-filter)}}.theme-card h2{{font:var(--rw-title-weight) var(--rw-title-size)/1.2 var(--rw-font-ui);margin:0}}.theme-card p{{margin:3px 0 14px;color:var(--rw-text-secondary)}}.icons{{display:flex;flex-wrap:wrap;gap:10px}}figure{{margin:0;width:68px;text-align:center}}figure img{{display:block;margin:auto;image-rendering:auto}}figcaption{{font-size:11px;margin-top:4px}}.decorations{{display:flex;gap:8px;padding:10px 0}}.decorations img{{background:var(--rw-titlebar-active-background);padding:2px;border-radius:2px}}.texture{{height:58px;border:1px solid var(--rw-border-default);display:flex;align-items:end;padding:6px;background-size:96px}}.texture span{{background:#fff;color:#111;padding:2px 5px}}table{{width:100%;border-collapse:collapse;background:#fff;margin-top:20px}}th,td{{padding:10px;border:1px solid #aaa;text-align:left;vertical-align:middle}}th{{width:130px}}audio{{max-width:100%;height:32px}}footer{{max-width:1180px;margin:22px auto}}@media(max-width:600px){{body{{padding:12px}}td{{display:block}}th{{display:block;width:auto}}audio{{width:100%}}}}
+*{{box-sizing:border-box}}body{{margin:0;padding:24px;background:#e7e7e7;color:#171717;font:14px/1.45 Tahoma,'Segoe UI',sans-serif}}header,section,table{{max-width:1180px;margin:auto}}h1{{margin:0 0 6px}}a{{color:#0645ad}}.theme-card{{padding:18px;margin:20px 0;background:var(--rw-surface-window);border:2px solid var(--rw-border-default);border-radius:var(--rw-radius-window);box-shadow:var(--rw-shadow-window);backdrop-filter:var(--rw-backdrop-filter)}}.theme-card h2{{font:var(--rw-title-weight) var(--rw-title-size)/1.2 var(--rw-font-ui);margin:0}}.theme-card p{{margin:3px 0 14px;color:var(--rw-text-secondary)}}.icons{{display:flex;flex-wrap:wrap;gap:10px}}figure{{margin:0;width:68px;text-align:center}}figure img{{display:block;margin:auto;image-rendering:auto}}figcaption{{font-size:11px;margin-top:4px}}.decorations{{display:flex;gap:8px;padding:10px 0}}.decorations img{{background:var(--rw-titlebar-active-background);padding:2px;border-radius:2px}}.brands{{display:flex;align-items:center;gap:8px;padding:4px 0}}.brands img{{image-rendering:auto}}.brands span{{color:var(--rw-text-secondary);font-size:11px}}.previews{{display:grid;grid-template-columns:minmax(160px,.45fr) minmax(260px,1fr);gap:10px}}.texture,.wallpaper{{height:108px;border:1px solid var(--rw-border-default);display:flex;align-items:end;padding:6px;background-position:center;background-size:cover}}.texture{{background-size:96px}}.texture span,.wallpaper span{{background:#fff;color:#111;padding:2px 5px}}table{{width:100%;border-collapse:collapse;background:#fff;margin-top:20px}}th,td{{padding:10px;border:1px solid #aaa;text-align:left;vertical-align:middle}}th{{width:130px}}audio{{max-width:100%;height:32px}}footer{{max-width:1180px;margin:22px auto}}@media(max-width:600px){{body{{padding:12px}}td{{display:block}}th{{display:block;width:auto}}audio{{width:100%}}.previews{{grid-template-columns:1fr}}}}
 </style></head>
-<body><header><h1>Retro Windows UI asset contact sheet</h1><p>Six original theme families, locally rendered vectors, textures, and opt-in audio. No remote resources.</p><nav><a href="starter/index.html">Starter example</a> · <a href="gallery/index.html">Interactive gallery</a> · <a href="manifest.json">Manifest</a> · <a href="LICENSE.txt">CC0 and independence notice</a></nav></header>
+<body><header><h1>Retro Windows UI asset contact sheet</h1><p>Six original theme families, a complete shell icon set, textures, wallpapers, start marks, and opt-in audio. No remote resources.</p><nav><a href="starter/index.html">Starter example</a> · <a href="desktop/index.html">Default desktop mockup</a> · <a href="boot/index.html">Startup screens</a> · <a href="gallery/index.html">Interactive gallery</a> · <a href="manifest.json">Manifest</a> · <a href="LICENSE.txt">CC0 and independence notice</a></nav></header>
 {''.join(sections)}
 <section aria-labelledby="audio-title"><h2 id="audio-title">Audio cues</h2><p>Audio never autoplays. Use the controls to audition each original cue.</p><table><thead><tr><th>File</th><th>Local preview</th><th>Provenance</th></tr></thead><tbody>{audio}</tbody></table></section>
 <footer>Independent, unofficial interface study. Microsoft and Windows are trademarks of their respective owners; no proprietary assets are included.</footer></body></html>
@@ -580,8 +880,9 @@ only to local system font stacks; no font software is distributed here.
 
 Provenance:
 SVG and WAV assets are deterministically generated by tools/build_assets.py.
-The starter and gallery are original hand-authored offline examples. Consult
-manifest.json for per-file provenance, media metadata, byte sizes, and SHA256.
+The starter, default desktop mockup, boot screens, and gallery are original
+hand-authored offline examples. Consult manifest.json for per-file provenance,
+media metadata, byte sizes, and SHA256.
 """
 
 
@@ -602,6 +903,14 @@ def asset_kind(path: str) -> str:
         return "decoration-sprite" if path.endswith("/decorations.svg") else "decoration-glyph"
     if path.startswith("textures/"):
         return "texture"
+    if path.startswith("wallpapers/"):
+        return "wallpaper"
+    if path.startswith("brand/"):
+        return "brand-mark"
+    if path.startswith("boot/"):
+        return "boot-example"
+    if path.startswith("desktop/"):
+        return "desktop-example"
     if path.startswith("audio/"):
         return "audio-cue"
     if path == "tokens/schema.json":
@@ -620,7 +929,7 @@ def asset_kind(path: str) -> str:
 
 
 def manifest_entry(path: str, data: bytes) -> dict:
-    generated = not path.startswith(("starter/", "gallery/"))
+    generated = not path.startswith(("starter/", "gallery/", "boot/", "desktop/"))
     provenance = PROVENANCE_CODE if not generated else (PROVENANCE_AUDIO if path.endswith(".wav") else PROVENANCE_SVG if path.endswith(".svg") else "Original deterministic semantic theme and presentation data.")
     entry = {
         "path": path,
@@ -637,10 +946,16 @@ def manifest_entry(path: str, data: bytes) -> dict:
     if parts[0] in ("icons", "decorations") and len(parts) > 2:
         entry["era"] = theme_pack(parts[1])["identity"]["era"]
         entry["variant"] = parts[1]
-    elif parts[0] == "textures":
-        theme_id = Path(path).stem
+    elif parts[0] in ("textures", "wallpapers"):
+        stem = Path(path).stem
+        theme_id = stem if stem in THEME_IDS else (stem.split("-")[0] if stem.startswith("classic-") else "classic")
         entry["era"] = theme_pack(theme_id)["identity"]["era"]
-        entry["variant"] = theme_id
+        entry["variant"] = stem
+    elif parts[0] == "brand" and len(parts) > 1:
+        theme_id = Path(path).stem.rsplit("-", 1)[0]
+        if theme_id in THEME_IDS:
+            entry["era"] = theme_pack(theme_id)["identity"]["era"]
+            entry["variant"] = theme_id
     elif path.startswith("tokens/") and path.endswith(".json") and path != "tokens/schema.json":
         theme_id = Path(path).stem
         entry["era"] = theme_pack(theme_id)["identity"]["era"]
@@ -670,6 +985,8 @@ def build_outputs() -> dict[str, bytes]:
     make_icon_assets(outputs)
     make_decoration_assets(outputs)
     make_texture_assets(outputs)
+    make_wallpaper_assets(outputs)
+    make_brand_assets(outputs)
     for name in ("activate", "notify", "complete", "error"):
         outputs[f"audio/{name}.wav"] = synthesize(name)
     outputs["contact-sheet.html"] = contact_sheet()
