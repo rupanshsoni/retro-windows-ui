@@ -5,6 +5,8 @@
   Windows Classic, XP Luna, and Windows 7 — complete original assets, semantic tokens, and accessible behavior.
 </p>
 
+![Windows desktop cycling through 95, 98, 2000, Me, XP, and 7 with the Settings window and default icons](docs/media/showcase/eras.gif)
+
 <p align="center">
   <img src="docs/media/harnesses/claude-code.svg" width="44" height="44" alt="Claude Code">
   <img src="docs/media/harnesses/codex.svg" width="44" height="44" alt="Codex">
@@ -20,23 +22,19 @@
 </p>
 
 <p align="center">
-  <img src="docs/media/badges/classic.svg" height="26" alt="Windows Classic 95, 98, and 2000">
-  <img src="docs/media/badges/xp.svg" height="26" alt="XP Luna blue, olive, and silver">
-  <img src="docs/media/badges/win7.svg" height="26" alt="Windows 7 Aero and Basic"><br>
-  <img src="docs/media/badges/offline.svg" height="26" alt="Offline and framework-free">
-  <img src="docs/media/badges/cc0.svg" height="26" alt="Packaged assets under CC0">
-  <img src="docs/media/badges/a11y.svg" height="26" alt="Accessible and keyboard-ready">
+  <img src="docs/media/badges/classic.svg" height="27" alt="Windows Classic 95, 98, and 2000">
+  <img src="docs/media/badges/xp.svg" height="27" alt="XP Luna blue, olive, and silver">
+  <img src="docs/media/badges/win7.svg" height="27" alt="Windows 7 Aero and Basic"><br>
+  <img src="docs/media/badges/offline.svg" height="27" alt="Offline and framework-free">
+  <img src="docs/media/badges/cc0.svg" height="27" alt="Packaged assets under CC0">
+  <img src="docs/media/badges/a11y.svg" height="27" alt="Accessible and keyboard-ready">
 </p>
 
 <p align="center">
   <sub><a href="#install">Install</a> · <a href="#themes">Themes</a> · <a href="#authentic-fidelity-showcase">Showcase</a> · <a href="#develop-and-validate">Develop</a> · <a href="#license">License</a></sub>
 </p>
 
-![Windows desktop cycling through 95, 98, 2000, Me, XP, and 7 with the Settings window and default icons](docs/media/showcase/eras.gif)
-
 A portable Agent Skill for designing, building, retrofitting, and reviewing retro Windows interfaces. It combines era-specific design guidance with complete original offline asset families, semantic tokens, a default Windows desktop mockup, startup-screen examples, an interactive gallery, and opt-in UI sound effects.
-
-The installable skill is original and offline. The showcase stills below come from a separate reference build that uses the portfolio's user-supplied Microsoft artwork; that media is documentation only and is not included in the package.
 
 ## Install
 
@@ -91,9 +89,9 @@ Every era includes:
 
 ## Authentic fidelity showcase
 
-The bundled neutral [desktop mockup](skills/retro-windows-ui/assets/desktop/index.html) remains the complete shell example that ships with the skill. The stills below come from the separate reference build used for this project's portfolio, which swaps in authentic Microsoft themes and wallpapers from the portfolio. They document the target fidelity; no Microsoft media is packaged.
+The reference stills, animated hero, and detail crop come from a docs-only build that uses the portfolio's user-supplied Microsoft artwork; no Microsoft media is packaged. The runtime examples below use only the original bundled assets.
 
-The hero keeps the XP desktop icon column visible. The six-era comparison captures hide desktop icons so the themes stay neutral; soft scanlines are applied throughout.
+The hero keeps the XP desktop icon column and stronger CRT treatment. The static comparisons hide desktop icons and use lighter scanlines for legibility.
 
 | Windows 95 · 1995 | Windows 98 · 1998 |
 | :---: | :---: |
@@ -103,15 +101,25 @@ The hero keeps the XP desktop icon column visible. The six-era comparison captur
 | **Windows XP · 2001** | **Windows 7 · 2009** |
 | [![Windows XP desktop with authentic Bliss wallpaper and Settings window](docs/media/showcase/xp-neutral.webp)](docs/media/showcase/xp-neutral.webp) | [![Windows 7 desktop with authentic wallpaper and Settings window](docs/media/showcase/win7.webp)](docs/media/showcase/win7.webp) |
 
-The skill keeps these eras distinct. Its installable runtime does not bundle Microsoft fonts, logos, extracted icons, wallpapers, or system sounds, and it is not affiliated with or endorsed by Microsoft.
+<p align="center">
+  <a href="docs/media/showcase/detail-xp.webp"><img src="docs/media/showcase/detail-xp.webp" width="720" alt="Enlarged XP Luna detail showing the Settings title bar, beveled fieldsets, radio buttons, action buttons, and taskbar"></a>
+</p>
 
-## Runtime boundaries
+<p align="center"><sub>XP Luna detail at 1.5×: title bar, beveled borders, controls, and taskbar.</sub></p>
 
-**Original by design.** The public runtime **does not** bundle Microsoft fonts, logos, extracted shell icons, wallpapers, boot screens, or system sounds. Microsoft-owned media cannot be redistributed in this public CC0 package. That is a rights constraint, not a lower-fidelity design choice: every era still ships the complete geometry, icon family, wallpaper, startup sequence, and behavior needed to build the interface.
+### Runtime examples
 
-The runtime also ships no portfolio template. Its full-shell example is the neutral [default Windows desktop mockup](skills/retro-windows-ui/assets/desktop/index.html); portfolio information architecture is covered as guidance in [references/portfolio-patterns.md](skills/retro-windows-ui/references/portfolio-patterns.md).
+Captured from the packaged `desktop`, `boot`, and `gallery` pages using only original assets.
 
-For an exact fan recreation, [references/asset-sourcing.md](skills/retro-windows-ui/references/asset-sourcing.md) documents how to import authentic assets from a user-supplied local reference, keep them out of the public package, and record the source and rights. The installable skill remains original and shippable.
+| Desktop + Start menu | Startup screen | Component gallery |
+| :---: | :---: | :---: |
+| <a href="docs/media/showcase/runtime-desktop.webp"><img src="docs/media/showcase/runtime-desktop.webp" width="288" alt="Packaged XP desktop with original icons and the Start menu open"></a> | <a href="docs/media/showcase/runtime-startup.webp"><img src="docs/media/showcase/runtime-startup.webp" width="288" alt="Packaged Windows 7 startup screen with an original loader"></a> | <a href="docs/media/showcase/runtime-gallery.webp"><img src="docs/media/showcase/runtime-gallery.webp" width="288" alt="Packaged component gallery showing buttons, fields, and selection states in Windows Classic"></a> |
+
+## Runtime scope
+
+The runtime ships no portfolio template. Its full-shell example is the neutral [default Windows desktop mockup](skills/retro-windows-ui/assets/desktop/index.html); portfolio information architecture is covered as guidance in [references/portfolio-patterns.md](skills/retro-windows-ui/references/portfolio-patterns.md).
+
+For an exact fan recreation, [references/asset-sourcing.md](skills/retro-windows-ui/references/asset-sourcing.md) documents how to import authentic assets from a user-supplied local reference, keep them out of the public package, and record the source and rights. The installable skill remains original and offline; full media terms are in [License](#license).
 
 ## Repository layout
 
@@ -172,9 +180,9 @@ On POSIX shells, use `.venv/bin/python`. Screenshots and results are written to 
 
 ## Asset and sound policy
 
-**Bundled assets.** All visual and audio assets are original and covered by `assets/LICENSE.txt`. `assets/manifest.json` records provenance, licensing, dimensions or audio metadata, byte size, and SHA-256. Unknown-provenance material is not shippable.
+**Bundled assets.** All bundled visual and audio assets are original and covered by `assets/LICENSE.txt`. `assets/manifest.json` records provenance, licensing, dimensions or audio metadata, byte size, and SHA-256. Unknown-provenance material is not shippable.
 
-**Generated shell set.** `tools/build_assets.py` deterministically produces 30 icons per theme, nine wallpapers including Classic 95/98/2000 alternates, six start/brand marks, six decoration sets, semantic tokens, and four synthesized cues. No Microsoft binary is bundled.
+**Generated shell set.** `tools/build_assets.py` deterministically produces 30 icons per theme, nine wallpapers including Classic 95/98/2000 alternates, six start/brand marks, six decoration sets, semantic tokens, and four synthesized cues.
 
 **Reference imports.** For a user-supplied authentic reference, copy artwork into a project without touching the public runtime and record its provenance:
 
@@ -192,8 +200,9 @@ The importer never downloads anything, skips font files, refuses symlinks, and r
 ## License
 
 - **Code and documentation:** MIT.
-- **Original bundled assets:** CC0-1.0; see `skills/retro-windows-ui/assets/LICENSE.txt`.
-- **Showcase stills:** Microsoft-derived reference artwork, documentation only; not part of the installable skill or the CC0 asset license.
+- **Original bundled runtime assets:** CC0-1.0; see `skills/retro-windows-ui/assets/LICENSE.txt`.
+- **Runtime example screenshots:** original bundled assets, CC0-1.0, documentation only.
+- **Reference showcase stills, animated hero, and detail crop:** Microsoft-derived reference artwork, documentation only; not part of the installable skill or the CC0 asset license. The package bundles no Microsoft fonts, icons, wallpapers, boot screens, or system sounds.
 - **Harness icons:** adapted from [LobeHub Icons](https://github.com/lobehub/lobe-icons) under MIT; see [attribution](docs/media/harnesses/ATTRIBUTION.md). They remain trademarks of their respective owners, are documentation only, and are excluded from the packaged skill.
 - **Historical sources:** linked references under their respective terms.
 

@@ -1,13 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="188" height="26" viewBox="0 0 188 26" role="img" aria-label="WINDOWS 7 · AERO/BASIC">
-  <title>WINDOWS 7 · AERO/BASIC</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="27" viewBox="0 0 150 27" role="img" aria-label="Windows 7 · Aero/Basic">
+  <title>Windows 7 · Aero/Basic</title>
   <defs>
-    <linearGradient id="g-win7" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0B6FA4"/>
-      <stop offset="1" stop-color="#1E9FD4"/>
+    <linearGradient id="w7-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FBFF"/>
+      <stop offset=".55" stop-color="#DDF1FC"/>
+      <stop offset="1" stop-color="#C9E8FA"/>
     </linearGradient>
+    <linearGradient id="w7-gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="w7-clip"><rect x="1" y="0" width="148" height="27" rx="3"/></clipPath>
   </defs>
-  <rect width="188" height="26" rx="13" fill="url(#g-win7)"/>
-  <rect x=".5" y=".5" width="187" height="25" rx="12.5" fill="none" stroke="#FFFFFF" stroke-opacity=".18"/>
-  <circle cx="13" cy="13" r="3.6" fill="#C8F0FF"/>
-  <text x="23" y="17.2" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" letter-spacing=".55">WINDOWS 7 · AERO/BASIC</text>
+  <rect x="1" y="0" width="148" height="27" rx="3" fill="url(#w7-body)" stroke="#8FC4DF"/>
+  <g clip-path="url(#w7-clip)">
+    <path d="M1 3 Q1 0 4 0 H146 Q149 0 149 3 V12 L1 20 Z" fill="#FFFFFF" opacity=".55"/>
+    <rect x="1" y="1" width="148" height="8" fill="url(#w7-gloss)"/>
+  </g>
+  <rect x="1.5" y=".5" width="147" height="26" rx="2.5" fill="none" stroke="#FFFFFF" stroke-opacity=".72"/>
+  <text x="10" y="17.7" fill="#0B3A6A" font-family="Tahoma, Arial, sans-serif" font-size="10.5" font-weight="700">Windows 7 · Aero/Basic</text>
 </svg>

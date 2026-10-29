@@ -1,13 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="207" height="26" viewBox="0 0 207 26" role="img" aria-label="XP LUNA · BLUE/OLIVE/SILVER">
-  <title>XP LUNA · BLUE/OLIVE/SILVER</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="27" viewBox="0 0 170 27" role="img" aria-label="XP Luna · Blue/Olive/Silver">
+  <title>XP Luna · Blue/Olive/Silver</title>
   <defs>
-    <linearGradient id="g-xp" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#245EDB"/>
-      <stop offset="1" stop-color="#3D87E8"/>
+    <linearGradient id="xp-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#72ADFF"/>
+      <stop offset=".16" stop-color="#3F86F5"/>
+      <stop offset=".55" stop-color="#0B55D8"/>
+      <stop offset="1" stop-color="#063FA8"/>
     </linearGradient>
+    <linearGradient id="xp-gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".62"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="xp-clip"><rect x="1" y="0" width="168" height="27" rx="4"/></clipPath>
   </defs>
-  <rect width="207" height="26" rx="13" fill="url(#g-xp)"/>
-  <rect x=".5" y=".5" width="206" height="25" rx="12.5" fill="none" stroke="#FFFFFF" stroke-opacity=".18"/>
-  <circle cx="13" cy="13" r="3.6" fill="#9BD67A"/>
-  <text x="23" y="17.2" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" letter-spacing=".55">XP LUNA · BLUE/OLIVE/SILVER</text>
+  <rect x="1" y="0" width="168" height="27" rx="4" fill="url(#xp-body)" stroke="#073C9C"/>
+  <g clip-path="url(#xp-clip)">
+    <rect x="1" y="0" width="4" height="27" fill="#3C9B35"/>
+    <rect x="1" y="0" width="4" height="2" fill="#86D875" opacity=".85"/>
+    <rect x="1" y="1" width="168" height="12" fill="url(#xp-gloss)"/>
+  </g>
+  <rect x="1.5" y=".5" width="167" height="26" rx="3.5" fill="none" stroke="#FFFFFF" stroke-opacity=".38"/>
+  <text x="12" y="17.7" fill="#FFFFFF" stroke="#052C70" stroke-width=".3" paint-order="stroke" font-family="Tahoma, Arial, sans-serif" font-size="10.5" font-weight="700">XP Luna · Blue/Olive/Silver</text>
 </svg>
