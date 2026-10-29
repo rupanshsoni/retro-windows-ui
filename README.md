@@ -31,7 +31,7 @@
 </p>
 
 <p align="center">
-  <sub><a href="#install">Install</a> · <a href="#themes">Themes</a> · <a href="#authentic-fidelity-showcase">Showcase</a> · <a href="#develop-and-validate">Develop</a> · <a href="#license">License</a></sub>
+  <sub><a href="#install">Install</a> · <a href="#themes">Themes</a> · <a href="#demo">Demo</a> · <a href="#authentic-fidelity-showcase">Showcase</a> · <a href="#develop-and-validate">Develop</a> · <a href="#license">License</a></sub>
 </p>
 
 A portable Agent Skill for designing, building, retrofitting, and reviewing retro Windows interfaces. It combines era-specific design guidance with complete original offline asset families, semantic tokens, a default Windows desktop mockup, startup-screen examples, an interactive gallery, and opt-in UI sound effects.
@@ -93,6 +93,16 @@ The reference stills, animated hero, and Start menu capture come from a docs-onl
 
 The hero opens each era's official Start menu over the default desktop icons with stronger CRT treatment. The static comparisons hide desktop icons and use lighter scanlines for legibility.
 
+### Demo
+
+<p align="center">
+  <a href="docs/media/showcase/demo.mp4">
+    <img src="docs/media/showcase/demo-poster.webp" width="960" alt="38-second demo showing a real XP Luna desktop, a copy dialog with progress and error states, three eras of the same markup, the shell icon set, and offline accessibility checks">
+  </a>
+  <br>
+  <sub><a href="docs/media/showcase/demo.mp4">▶ Watch the 38-second demo</a> · real skill pages, not mockups · original chiptune score · 720p MP4</sub>
+</p>
+
 | Windows 95 · 1995 | Windows 98 · 1998 |
 | :---: | :---: |
 | [![Windows 95 desktop with authentic wallpaper and Settings window](docs/media/showcase/win95.webp)](docs/media/showcase/win95.webp) | [![Windows 98 desktop with authentic wallpaper and Settings window](docs/media/showcase/win98.webp)](docs/media/showcase/win98.webp) |
@@ -134,7 +144,7 @@ skills/retro-windows-ui/   Portable runtime skill
 evals/                     Agent behavior evaluation scenarios
 tests/                     Deterministic repository tests
 tools/                     Asset generation, packaging, and browser QA
-docs/media/                Documentation-only stills, harness icons, and color badges
+docs/media/                Documentation-only stills, harness icons, color badges, and the demo
 ```
 
 ## Develop and validate
@@ -202,7 +212,8 @@ The importer never downloads anything, skips font files, refuses symlinks, and r
 - **Code and documentation:** MIT.
 - **Original bundled runtime assets:** CC0-1.0; see `skills/retro-windows-ui/assets/LICENSE.txt`.
 - **Runtime example screenshots:** original bundled assets, CC0-1.0, documentation only.
-- **Reference showcase stills, animated hero, and Start menu capture:** Microsoft-derived reference artwork, documentation only; not part of the installable skill or the CC0 asset license. The package bundles no Microsoft fonts, icons, wallpapers, boot screens, or system sounds.
+- **Reference showcase stills, animated hero, Start menu capture, demo poster, and demo video:** Microsoft-derived reference artwork, documentation only; not part of the installable skill or the CC0 asset license. The package bundles no Microsoft fonts, icons, wallpapers, boot screens, or system sounds.
+- **Demo soundtrack and sound design:** original chiptune score and cues, documentation only; not part of the packaged skill.
 - **Harness icons:** adapted from [LobeHub Icons](https://github.com/lobehub/lobe-icons) under MIT; see [attribution](docs/media/harnesses/ATTRIBUTION.md). They remain trademarks of their respective owners, are documentation only, and are excluded from the packaged skill.
 - **Historical sources:** linked references under their respective terms.
 
