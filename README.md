@@ -5,7 +5,7 @@
   Windows Classic, XP Luna, and Windows 7 — complete original assets, semantic tokens, and accessible behavior.
 </p>
 
-![Windows desktop cycling through 95, 98, 2000, Me, XP, and 7 with the Settings window and default icons](docs/media/showcase/eras.gif)
+![Windows desktops cycling through XP, 95, 98, 2000, Me, and 7 with each era's Start menu open and default icons](docs/media/showcase/eras.gif)
 
 <p align="center">
   <img src="docs/media/harnesses/claude-code.svg" width="44" height="44" alt="Claude Code">
@@ -89,9 +89,9 @@ Every era includes:
 
 ## Authentic fidelity showcase
 
-The reference stills, animated hero, and detail crop come from a docs-only build that uses the portfolio's user-supplied Microsoft artwork; no Microsoft media is packaged. The runtime examples below use only the original bundled assets.
+The reference stills, animated hero, and Start menu capture come from a docs-only build that uses the portfolio's user-supplied Microsoft artwork; no Microsoft media is packaged. The runtime examples below use only the original bundled assets.
 
-The hero keeps the XP desktop icon column and stronger CRT treatment. The static comparisons hide desktop icons and use lighter scanlines for legibility.
+The hero opens each era's official Start menu over the default desktop icons with stronger CRT treatment. The static comparisons hide desktop icons and use lighter scanlines for legibility.
 
 | Windows 95 · 1995 | Windows 98 · 1998 |
 | :---: | :---: |
@@ -102,10 +102,10 @@ The hero keeps the XP desktop icon column and stronger CRT treatment. The static
 | [![Windows XP desktop with authentic Bliss wallpaper and Settings window](docs/media/showcase/xp-neutral.webp)](docs/media/showcase/xp-neutral.webp) | [![Windows 7 desktop with authentic wallpaper and Settings window](docs/media/showcase/win7.webp)](docs/media/showcase/win7.webp) |
 
 <p align="center">
-  <a href="docs/media/showcase/detail-xp.webp"><img src="docs/media/showcase/detail-xp.webp" width="720" alt="Enlarged XP Luna detail showing the Settings title bar, beveled fieldsets, radio buttons, action buttons, and taskbar"></a>
+  <a href="docs/media/showcase/start-xp.webp"><img src="docs/media/showcase/start-xp.webp" width="470" alt="Windows XP desktop with the official Start menu open showing default programs, places, and the taskbar"></a>
 </p>
 
-<p align="center"><sub>XP Luna detail at 1.5×: title bar, beveled borders, controls, and taskbar.</sub></p>
+<p align="center"><sub>XP Luna Start menu with the official two-column layout, default programs and places, and the taskbar.</sub></p>
 
 ### Runtime examples
 
@@ -202,7 +202,7 @@ The importer never downloads anything, skips font files, refuses symlinks, and r
 - **Code and documentation:** MIT.
 - **Original bundled runtime assets:** CC0-1.0; see `skills/retro-windows-ui/assets/LICENSE.txt`.
 - **Runtime example screenshots:** original bundled assets, CC0-1.0, documentation only.
-- **Reference showcase stills, animated hero, and detail crop:** Microsoft-derived reference artwork, documentation only; not part of the installable skill or the CC0 asset license. The package bundles no Microsoft fonts, icons, wallpapers, boot screens, or system sounds.
+- **Reference showcase stills, animated hero, and Start menu capture:** Microsoft-derived reference artwork, documentation only; not part of the installable skill or the CC0 asset license. The package bundles no Microsoft fonts, icons, wallpapers, boot screens, or system sounds.
 - **Harness icons:** adapted from [LobeHub Icons](https://github.com/lobehub/lobe-icons) under MIT; see [attribution](docs/media/harnesses/ATTRIBUTION.md). They remain trademarks of their respective owners, are documentation only, and are excluded from the packaged skill.
 - **Historical sources:** linked references under their respective terms.
 
