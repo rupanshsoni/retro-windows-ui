@@ -32,7 +32,7 @@
   <sub><a href="#install">Install</a> · <a href="#themes">Themes</a> · <a href="#authentic-fidelity-showcase">Showcase</a> · <a href="#develop-and-validate">Develop</a> · <a href="#license">License</a></sub>
 </p>
 
-![Windows XP desktop with authentic Bliss wallpaper, the desktop icon column, and the Settings window under soft scanlines](docs/media/showcase/xp.webp)
+![Windows desktop cycling through 95, 98, 2000, Me, XP, and 7 with the Settings window and default icons](docs/media/showcase/eras.gif)
 
 A portable Agent Skill for designing, building, retrofitting, and reviewing retro Windows interfaces. It combines era-specific design guidance with complete original offline asset families, semantic tokens, a default Windows desktop mockup, startup-screen examples, an interactive gallery, and opt-in UI sound effects.
 
