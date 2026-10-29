@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="207" height="26" viewBox="0 0 207 26" role="img" aria-label="XP LUNA · BLUE/OLIVE/SILVER">
+  <title>XP LUNA · BLUE/OLIVE/SILVER</title>
+  <defs>
+    <linearGradient id="g-xp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#245EDB"/>
+      <stop offset="1" stop-color="#3D87E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="207" height="26" rx="13" fill="url(#g-xp)"/>
+  <rect x=".5" y=".5" width="206" height="25" rx="12.5" fill="none" stroke="#FFFFFF" stroke-opacity=".18"/>
+  <circle cx="13" cy="13" r="3.6" fill="#9BD67A"/>
+  <text x="23" y="17.2" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" letter-spacing=".55">XP LUNA · BLUE/OLIVE/SILVER</text>
+</svg>
